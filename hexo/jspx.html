@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -24,7 +22,9 @@
 
   <!-- 页面元数据 -->
   
-  <title>標籤：sitemap - Xnote</title>
+  <title>js实现网站飘雪 - Xnote</title>
+  
+    <meta name="keywords" content="hexo,js">
   
 
   
@@ -453,7 +453,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="full" class='cover-wrapper  dock' style="display: none;">
+        <div id="full" class='cover-wrapper post dock' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture"></div>
           
@@ -528,79 +528,230 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper" id="pjax-container">
           
 
-
 <div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   
+
+
+  
+  <div class="article-meta" id="top">
     
-      
-  <section class="post-list">
     
-      
+    
+      <h1 class="title">
+        js实现网站飘雪
+      </h1>
+      <div class='new-meta-box'>
         
           
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/weblogo.png">
+    <p>XGS</p>
+  </a>
+</div>
+
+          
         
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/hexo/gooleweb.html">
-        如何让谷歌收录你的网站
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        说明网站在没有提交搜索引擎收录之前，直接搜索你网站的内容是搜不到的，只有提交搜索引擎之后，搜索引擎才能收录你的站点，通过爬虫抓取你网站的东西。
-步骤一:修改config.yml下的url在hexo根目录的_config.yml文件，找到url，将url的值改为自己的域名
-12url: 域名例如：url: https:&#x2F;&#x2F;www.zyxlfl.top
-步骤二: 生成site...
-      
-    
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/hexo/">hexo</a>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+
+
+          
         
-        <time>2021-01-06</time>
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年1月19日</p>
+  </a>
+</div>
+
+          
         
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/hexo/">hexo</a>
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="js实现网站飘雪" data-path="/hexo/jspx.html">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  
+  <h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>效果预览：<br><img src="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/s2R1tP.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/s2R1tP.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h3 id="新建snow-js文件"><a href="#新建snow-js文件" class="headerlink" title="新建snow.js文件"></a>新建snow.js文件</h3><p>详细实现步骤：<br>1.在 \Hexo\themes\网站主题\source\js 目录下新建一个 snow.js 文件，粘贴以下代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 控制下雪 */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">snowFall</span>(<span class="params">snow</span>) </span>&#123;</span><br><span class="line">    <span class="comment">/* 可配置属性 */</span></span><br><span class="line">    snow = snow || &#123;&#125;;</span><br><span class="line">    <span class="built_in">this</span>.maxFlake = snow.maxFlake || <span class="number">200</span>;   <span class="comment">/* 最多片数 */</span></span><br><span class="line">    <span class="built_in">this</span>.flakeSize = snow.flakeSize || <span class="number">10</span>;  <span class="comment">/* 雪花形状 */</span></span><br><span class="line">    <span class="built_in">this</span>.fallSpeed = snow.fallSpeed || <span class="number">1</span>;   <span class="comment">/* 坠落速度 */</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 兼容写法 */</span></span><br><span class="line">requestAnimationFrame = <span class="built_in">window</span>.requestAnimationFrame ||</span><br><span class="line">    <span class="built_in">window</span>.mozRequestAnimationFrame ||</span><br><span class="line">    <span class="built_in">window</span>.webkitRequestAnimationFrame ||</span><br><span class="line">    <span class="built_in">window</span>.msRequestAnimationFrame ||</span><br><span class="line">    <span class="built_in">window</span>.oRequestAnimationFrame ||</span><br><span class="line">    <span class="function"><span class="keyword">function</span>(<span class="params">callback</span>) </span>&#123; <span class="built_in">setTimeout</span>(callback, <span class="number">1000</span> / <span class="number">60</span>); &#125;;</span><br><span class="line"> </span><br><span class="line">cancelAnimationFrame = <span class="built_in">window</span>.cancelAnimationFrame ||</span><br><span class="line">    <span class="built_in">window</span>.mozCancelAnimationFrame ||</span><br><span class="line">    <span class="built_in">window</span>.webkitCancelAnimationFrame ||</span><br><span class="line">    <span class="built_in">window</span>.msCancelAnimationFrame ||</span><br><span class="line">    <span class="built_in">window</span>.oCancelAnimationFrame;</span><br><span class="line"><span class="comment">/* 开始下雪 */</span></span><br><span class="line">snowFall.prototype.start = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">/* 创建画布 */</span></span><br><span class="line">    snowCanvas.apply(<span class="built_in">this</span>);</span><br><span class="line">    <span class="comment">/* 创建雪花形状 */</span></span><br><span class="line">    createFlakes.apply(<span class="built_in">this</span>);</span><br><span class="line">    <span class="comment">/* 画雪 */</span></span><br><span class="line">    drawSnow.apply(<span class="built_in">this</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 创建画布 */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">snowCanvas</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">/* 添加Dom结点 */</span></span><br><span class="line">    <span class="keyword">var</span> snowcanvas = <span class="built_in">document</span>.createElement(<span class="string">&quot;canvas&quot;</span>);</span><br><span class="line">    snowcanvas.id = <span class="string">&quot;snowfall&quot;</span>;</span><br><span class="line">    snowcanvas.width = <span class="built_in">window</span>.innerWidth;</span><br><span class="line">    snowcanvas.height = <span class="built_in">document</span>.body.clientHeight;</span><br><span class="line">    snowcanvas.setAttribute(<span class="string">&quot;style&quot;</span>, <span class="string">&quot;position:absolute; top: 0; left: 0; z-index: 1; pointer-events: none;&quot;</span>);</span><br><span class="line">    <span class="built_in">document</span>.getElementsByTagName(<span class="string">&quot;body&quot;</span>)[<span class="number">0</span>].appendChild(snowcanvas);</span><br><span class="line">    <span class="built_in">this</span>.canvas = snowcanvas;</span><br><span class="line">    <span class="built_in">this</span>.ctx = snowcanvas.getContext(<span class="string">&quot;2d&quot;</span>);</span><br><span class="line">    <span class="comment">/* 窗口大小改变的处理 */</span></span><br><span class="line">    <span class="built_in">window</span>.onresize = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        snowcanvas.width = <span class="built_in">window</span>.innerWidth;</span><br><span class="line">        <span class="comment">/* snowcanvas.height = window.innerHeight */</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 雪运动对象 */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">flakeMove</span>(<span class="params">canvasWidth, canvasHeight, flakeSize, fallSpeed</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.x = <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * canvasWidth);   <span class="comment">/* x坐标 */</span></span><br><span class="line">    <span class="built_in">this</span>.y = <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * canvasHeight);  <span class="comment">/* y坐标 */</span></span><br><span class="line">    <span class="built_in">this</span>.size = <span class="built_in">Math</span>.random() * flakeSize + <span class="number">2</span>;          <span class="comment">/* 形状 */</span></span><br><span class="line">    <span class="built_in">this</span>.maxSize = flakeSize;                           <span class="comment">/* 最大形状 */</span></span><br><span class="line">    <span class="built_in">this</span>.speed = <span class="built_in">Math</span>.random() * <span class="number">1</span> + fallSpeed;         <span class="comment">/* 坠落速度 */</span></span><br><span class="line">    <span class="built_in">this</span>.fallSpeed = fallSpeed;                         <span class="comment">/* 坠落速度 */</span></span><br><span class="line">    <span class="built_in">this</span>.velY = <span class="built_in">this</span>.speed;                             <span class="comment">/* Y方向速度 */</span></span><br><span class="line">    <span class="built_in">this</span>.velX = <span class="number">0</span>;                                      <span class="comment">/* X方向速度 */</span></span><br><span class="line">    <span class="built_in">this</span>.stepSize = <span class="built_in">Math</span>.random() / <span class="number">30</span>;                 <span class="comment">/* 步长 */</span></span><br><span class="line">    <span class="built_in">this</span>.step = <span class="number">0</span>                                       <span class="comment">/* 步数 */</span></span><br><span class="line">&#125;</span><br><span class="line">flakeMove.prototype.update = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> x = <span class="built_in">this</span>.x,</span><br><span class="line">        y = <span class="built_in">this</span>.y;</span><br><span class="line">    <span class="comment">/* 左右摆动(余弦) */</span></span><br><span class="line">    <span class="built_in">this</span>.velX *= <span class="number">0.98</span>;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">this</span>.velY &lt;= <span class="built_in">this</span>.speed) &#123;</span><br><span class="line">        <span class="built_in">this</span>.velY = <span class="built_in">this</span>.speed</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">this</span>.velX += <span class="built_in">Math</span>.cos(<span class="built_in">this</span>.step += <span class="number">.05</span>) * <span class="built_in">this</span>.stepSize;</span><br><span class="line"> </span><br><span class="line">    <span class="built_in">this</span>.y += <span class="built_in">this</span>.velY;</span><br><span class="line">    <span class="built_in">this</span>.x += <span class="built_in">this</span>.velX;</span><br><span class="line">    <span class="comment">/* 飞出边界的处理 */</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">this</span>.x &gt;= canvas.width || <span class="built_in">this</span>.x &lt;= <span class="number">0</span> || <span class="built_in">this</span>.y &gt;= canvas.height || <span class="built_in">this</span>.y &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">this</span>.reset(canvas.width, canvas.height)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">/* 飞出边界-放置最顶端继续坠落 */</span></span><br><span class="line">flakeMove.prototype.reset = <span class="function"><span class="keyword">function</span>(<span class="params">width, height</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.x = <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * width);</span><br><span class="line">    <span class="built_in">this</span>.y = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">this</span>.size = <span class="built_in">Math</span>.random() * <span class="built_in">this</span>.maxSize + <span class="number">2</span>;</span><br><span class="line">    <span class="built_in">this</span>.speed = <span class="built_in">Math</span>.random() * <span class="number">1</span> + <span class="built_in">this</span>.fallSpeed;</span><br><span class="line">    <span class="built_in">this</span>.velY = <span class="built_in">this</span>.speed;</span><br><span class="line">    <span class="built_in">this</span>.velX = <span class="number">0</span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 渲染雪花-随机形状（此处可修改雪花颜色！！！）</span></span><br><span class="line">flakeMove.prototype.render = <span class="function"><span class="keyword">function</span>(<span class="params">ctx</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> snowFlake = ctx.createRadialGradient(<span class="built_in">this</span>.x, <span class="built_in">this</span>.y, <span class="number">0</span>, <span class="built_in">this</span>.x, <span class="built_in">this</span>.y, <span class="built_in">this</span>.size);</span><br><span class="line">    snowFlake.addColorStop(<span class="number">0</span>, <span class="string">&quot;rgba(255, 255, 255, 0.9)&quot;</span>);  <span class="comment">/* 此处是雪花颜色，默认是白色 */</span></span><br><span class="line">    snowFlake.addColorStop(<span class="number">.5</span>, <span class="string">&quot;rgba(255, 255, 255, 0.5)&quot;</span>); <span class="comment">/* 若要改为其他颜色，请自行查 */</span></span><br><span class="line">    snowFlake.addColorStop(<span class="number">1</span>, <span class="string">&quot;rgba(255, 255, 255, 0)&quot;</span>);    <span class="comment">/* 找16进制的RGB 颜色代码。 */</span></span><br><span class="line">    ctx.save();</span><br><span class="line">    ctx.fillStyle = snowFlake;</span><br><span class="line">    ctx.beginPath();</span><br><span class="line">    ctx.arc(<span class="built_in">this</span>.x, <span class="built_in">this</span>.y, <span class="built_in">this</span>.size, <span class="number">0</span>, <span class="built_in">Math</span>.PI * <span class="number">2</span>);</span><br><span class="line">    ctx.fill();</span><br><span class="line">    ctx.restore();</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">/* 创建雪花-定义形状 */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createFlakes</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> maxFlake = <span class="built_in">this</span>.maxFlake,</span><br><span class="line">        flakes = <span class="built_in">this</span>.flakes = [],</span><br><span class="line">        canvas = <span class="built_in">this</span>.canvas;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; maxFlake; i++) &#123;</span><br><span class="line">        flakes.push(<span class="keyword">new</span> flakeMove(canvas.width, canvas.height, <span class="built_in">this</span>.flakeSize, <span class="built_in">this</span>.fallSpeed))</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 画雪 */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">drawSnow</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> maxFlake = <span class="built_in">this</span>.maxFlake,</span><br><span class="line">        flakes = <span class="built_in">this</span>.flakes;</span><br><span class="line">    ctx = <span class="built_in">this</span>.ctx, canvas = <span class="built_in">this</span>.canvas, that = <span class="built_in">this</span>;</span><br><span class="line">    <span class="comment">/* 清空雪花 */</span></span><br><span class="line">    ctx.clearRect(<span class="number">0</span>, <span class="number">0</span>, canvas.width, canvas.height);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> e = <span class="number">0</span>; e &lt; maxFlake; e++) &#123;</span><br><span class="line">        flakes[e].update();</span><br><span class="line">        flakes[e].render(ctx);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/*  一帧一帧的画 */</span></span><br><span class="line">    <span class="built_in">this</span>.loop = requestAnimationFrame(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        drawSnow.apply(that);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 调用及控制方法 */</span></span><br><span class="line"><span class="keyword">var</span> snow = <span class="keyword">new</span> snowFall(&#123;<span class="attr">maxFlake</span>:<span class="number">60</span>&#125;);</span><br><span class="line">snow.start();</span><br></pre></td></tr></table></figure>
+<h3 id="引用snow-js"><a href="#引用snow-js" class="headerlink" title="引用snow.js"></a>引用snow.js</h3><p>1.在 \Hexo\themes\网站主题\layout\layout.ejs 文件里引用即可：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 雪花特效 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;\js\snow.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><p>1.没有效果，请确认网页是否已载入JQurey，如果没有请在下雪代码之前引入JQ即可：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;http://libs.baidu.com/jquery/1.8.3/jquery.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;http://libs.baidu.com/jquery/1.8.3/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/hexo/gooleweb.html'>
-            閱讀全文
-          </a>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=https://note.xgamego.top/hexo/jspx.html>https://note.xgamego.top/hexo/jspx.html</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-04-29T19:28:22+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2021年4月29日</p>
+  </a>
 </div>
 
-          </div>
         
       
-    
-  </section>
+        
+          
   
-    
-  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/hexo/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>hexo</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/js/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>js</p></a></div>
 
 
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://note.xgamego.top/hexo/jspx.html&title=js实现网站飘雪 - Xnote&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://note.xgamego.top/hexo/jspx.html&title=js实现网站飘雪 - Xnote&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://note.xgamego.top/hexo/jspx.html&title=js实现网站飘雪 - Xnote&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
   
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/hexo/hexoLinks.html'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>hexo友链优化</p>
+          <p class='content'>实现对hexo-fluid的友链自定义，可以在下面放置评论区，以及md格式文字
+正文1.关闭主题配置里面的links2.新建一个links页面hexo new page links3.位于sou...</p>
+        </a>
+      
+      
+        <a class='next' href='/hexo/webNameGithub.html'>
+          <p class='title'>将域名解析到github仓库地址<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>说明实现不再通过繁杂的github地址githubname.github.io访问仓库，通过简短的域名访问，方便记忆，本篇就讲讲怎么将域名解析到github地址，实现域名访问仓库。
+购买域名1....</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="twikoo_container">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -608,163 +759,28 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
 
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/weblogo.png'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">Xnote</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:me@xxx.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
 
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop">
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/hexo/" href="/categories/hexo/"
-            id="categorieshexo"
-            ><div class='name'>hexo</div><div class='badge'>(10)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3/" href="/categories/%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3/"
-            id="categoriesE5BC80E58F91E79BB8E585B3"
-            ><div class='name'>开发相关</div><div class='badge'>(4)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/" href="/categories/%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/"
-            id="categoriesE5BC80E58F91E79BB8E585B3E5898DE7ABAF"
-            ><div class='name'>前端</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3/%E5%90%8E%E7%AB%AF/" href="/categories/%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3/%E5%90%8E%E7%AB%AF/"
-            id="categoriesE5BC80E58F91E79BB8E585B3E5908EE7ABAF"
-            ><div class='name'>后端</div><div class='badge'>(3)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E"><span class="toc-text">说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%BB%BAsnow-js%E6%96%87%E4%BB%B6"><span class="toc-text">新建snow.js文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E7%94%A8snow-js"><span class="toc-text">引用snow.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-text">常见问题</span></a></li></ol>
     </div>
   </section>
 
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/comment/" style="font-size: 14px; color: #999">comment</a> <a href="/tags/ejs/" style="font-size: 14px; color: #999">ejs</a> <a href="/tags/github/" style="font-size: 14px; color: #999">github</a> <a href="/tags/google/" style="font-size: 14px; color: #999">google</a> <a href="/tags/hexo/" style="font-size: 24px; color: #555">hexo</a> <a href="/tags/html/" style="font-size: 14px; color: #999">html</a> <a href="/tags/js/" style="font-size: 17.33px; color: #828282">js</a> <a href="/tags/linux/" style="font-size: 17.33px; color: #828282">linux</a> <a href="/tags/node/" style="font-size: 14px; color: #999">node</a> <a href="/tags/npm/" style="font-size: 14px; color: #999">npm</a> <a href="/tags/sitemap/" style="font-size: 14px; color: #999">sitemap</a> <a href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 17.33px; color: #828282">云服务器</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 20.67px; color: #6c6c6c">博客</a> <a href="/tags/%E5%8F%AF%E9%81%93%E4%BA%91/" style="font-size: 17.33px; color: #828282">可道云</a> <a href="/tags/%E5%9F%9F%E5%90%8D/" style="font-size: 14px; color: #999">域名</a> <a href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/" style="font-size: 14px; color: #999">阿里云</a>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-
-<section class="widget qrcode shadow desktop mobile">
-  
-
-  <div class='content article-entry'>
-    
-      <img src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/qrcode/github@volantis.png'
-      
-        height='64px'
-      />
-    
-      <img src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/qrcode/github@volantis.png'
-      
-        height='64px'
-      />
-    
-  </div>
-</section>
 
   
 
 
 </aside>
+
 
 
 		  
@@ -773,8 +789,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="js实现网站飘雪";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   // header 这里无论是否开启pjax都需要

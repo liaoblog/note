@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -24,7 +22,9 @@
 
   <!-- 页面元数据 -->
   
-  <title>標籤：sitemap - Xnote</title>
+  <title>如何让谷歌收录你的网站 - Xnote</title>
+  
+    <meta name="keywords" content="hexo,google,sitemap">
   
 
   
@@ -453,7 +453,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="full" class='cover-wrapper  dock' style="display: none;">
+        <div id="full" class='cover-wrapper post dock' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture"></div>
           
@@ -528,79 +528,236 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper" id="pjax-container">
           
 
-
 <div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   
+
+
+  
+  <div class="article-meta" id="top">
     
-      
-  <section class="post-list">
     
-      
+    
+      <h1 class="title">
+        如何让谷歌收录你的网站
+      </h1>
+      <div class='new-meta-box'>
         
           
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/weblogo.png">
+    <p>XGS</p>
+  </a>
+</div>
+
+          
         
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/hexo/gooleweb.html">
-        如何让谷歌收录你的网站
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        说明网站在没有提交搜索引擎收录之前，直接搜索你网站的内容是搜不到的，只有提交搜索引擎之后，搜索引擎才能收录你的站点，通过爬虫抓取你网站的东西。
-步骤一:修改config.yml下的url在hexo根目录的_config.yml文件，找到url，将url的值改为自己的域名
-12url: 域名例如：url: https:&#x2F;&#x2F;www.zyxlfl.top
-步骤二: 生成site...
-      
-    
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/hexo/">hexo</a>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+
+
+          
         
-        <time>2021-01-06</time>
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年1月6日</p>
+  </a>
+</div>
+
+          
         
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/hexo/">hexo</a>
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="如何让谷歌收录你的网站" data-path="/hexo/gooleweb.html">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  
+  <h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>网站在没有提交搜索引擎收录之前，直接搜索你网站的内容是搜不到的，只有提交搜索引擎之后，搜索引擎才能收录你的站点，通过爬虫抓取你网站的东西。</p>
+<h3 id="步骤一-修改config-yml下的url"><a href="#步骤一-修改config-yml下的url" class="headerlink" title="步骤一:修改config.yml下的url"></a>步骤一:修改config.yml下的url</h3><p>在hexo根目录的_config.yml文件，找到url，将url的值改为自己的域名</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">url: 域名</span><br><span class="line">例如：url: https:&#x2F;&#x2F;www.zyxlfl.top</span><br></pre></td></tr></table></figure>
+<h3 id="步骤二-生成sitemap"><a href="#步骤二-生成sitemap" class="headerlink" title="步骤二: 生成sitemap"></a>步骤二: 生成sitemap</h3><p>1.首先我们要使用git键入以下命令生成一个网站地图：<br>2.两种方式任选其一，第一种方式报错则使用第二种</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br><span class="line">cnpm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
+<h3 id="步骤三-修改-config-yml文件"><a href="#步骤三-修改-config-yml文件" class="headerlink" title="步骤三:修改_config.yml文件"></a>步骤三:修改_config.yml文件</h3><p>1.在hexo根目录的_config.yml文件添加以下内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 自动生成sitemap</span><br><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br></pre></td></tr></table></figure>
+<p>2.然后使用git工具hexo g生成一下，接着hexo d上传部署即可<br>3.此时，进入 public 目录，你会发现里面有 sitemap.xml文件，这就是生成的站点地图。里面包含了网站上所有页面的链接，搜索引擎通过这个文件来抓取网站页面</p>
+<h3 id="步骤四-进入谷歌站长工具配置（需要科学上网）"><a href="#步骤四-进入谷歌站长工具配置（需要科学上网）" class="headerlink" title="步骤四:进入谷歌站长工具配置（需要科学上网）"></a>步骤四:进入谷歌站长工具配置（需要科学上网）</h3><p>1.现在我们需要将网站提交谷歌搜索引擎搜索，进入谷歌站长平台，（需要科学上网）点击跳转：<a target="_blank" rel="noopener" href="https://goo.gle/searchconsole">searchconsole</a>登录你的谷歌账号之后会让你验证网站所有权：<br><img src="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/sZKVtH.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/sZKVtH.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="><br>2.选择第一个，填入你的域名，子域名部分（例如：zyxlfl.top）<br>3.确定之后会给你一个 TXT 的记录值，复制它到你域名 DNS 增加一个 TXT 记录，点击验证即可<br><img src="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/sZQopd.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/sZQopd.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="><br>4.前往域名控制台域名解析处配置，将TXT值复制到记录值处<br><img src="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/sZMp5Q.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/sZMp5Q.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="><br>5.配置完毕即可<br><img src="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/sZMSUg.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/sZMSUg.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="><br>6.之后我们点击站点地图，随后在添加新的站点地图中将sitemap.xml的位置填上去，点击提交即可<br><img src="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/sZlEAU.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/sZlEAU.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="><br>7.位置为：域名/sitemap.xml，例如我的是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.zyxlfl.top&#x2F;sitemap.xml</span><br></pre></td></tr></table></figure>
+<p>8.将此链接填上点击提交，下面出现成功即可，谷歌收录很快，几个小时就会收录成功了<br>9.查看是否被收录，谷歌搜索以下内容即可：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">site:域名</span><br><span class="line">例如：site:www.zyxlfl.top</span><br></pre></td></tr></table></figure>
+<h3 id="尾记"><a href="#尾记" class="headerlink" title="尾记"></a>尾记</h3><p>1.有错误请评论指出，谢谢，希望文章能够帮助到烂记性的自己和正在观看此博客的你。</p>
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/hexo/gooleweb.html'>
-            閱讀全文
-          </a>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=https://note.xgamego.top/hexo/gooleweb.html>https://note.xgamego.top/hexo/gooleweb.html</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-04-29T19:36:00+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2021年4月29日</p>
+  </a>
 </div>
 
-          </div>
         
       
-    
-  </section>
+        
+          
   
-    
-  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/hexo/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>hexo</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/google/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>google</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/sitemap/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>sitemap</p></a></div>
 
 
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://note.xgamego.top/hexo/gooleweb.html&title=如何让谷歌收录你的网站 - Xnote&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://note.xgamego.top/hexo/gooleweb.html&title=如何让谷歌收录你的网站 - Xnote&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://note.xgamego.top/hexo/gooleweb.html&title=如何让谷歌收录你的网站 - Xnote&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
   
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/hexo/webNameGithub.html'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>将域名解析到github仓库地址</p>
+          <p class='content'>说明实现不再通过繁杂的github地址githubname.github.io访问仓库，通过简短的域名访问，方便记忆，本篇就讲讲怎么将域名解析到github地址，实现域名访问仓库。
+购买域名1....</p>
+        </a>
+      
+      
+        <a class='next' href='/hexo/hexoValine.html'>
+          <p class='title'>网站添加valine评论<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>修改fluid主题配置文件1.进入fluid主题下的配置文件(config.yml)2.找到comments配置，将enable的值改为true，type的值改为valine3.往下划，找到va...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="twikoo_container">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -608,163 +765,28 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
 
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/weblogo.png'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">Xnote</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:me@xxx.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
 
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop">
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/hexo/" href="/categories/hexo/"
-            id="categorieshexo"
-            ><div class='name'>hexo</div><div class='badge'>(10)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3/" href="/categories/%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3/"
-            id="categoriesE5BC80E58F91E79BB8E585B3"
-            ><div class='name'>开发相关</div><div class='badge'>(4)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/" href="/categories/%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/"
-            id="categoriesE5BC80E58F91E79BB8E585B3E5898DE7ABAF"
-            ><div class='name'>前端</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3/%E5%90%8E%E7%AB%AF/" href="/categories/%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3/%E5%90%8E%E7%AB%AF/"
-            id="categoriesE5BC80E58F91E79BB8E585B3E5908EE7ABAF"
-            ><div class='name'>后端</div><div class='badge'>(3)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E"><span class="toc-text">说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4%E4%B8%80-%E4%BF%AE%E6%94%B9config-yml%E4%B8%8B%E7%9A%84url"><span class="toc-text">步骤一:修改config.yml下的url</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4%E4%BA%8C-%E7%94%9F%E6%88%90sitemap"><span class="toc-text">步骤二: 生成sitemap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4%E4%B8%89-%E4%BF%AE%E6%94%B9-config-yml%E6%96%87%E4%BB%B6"><span class="toc-text">步骤三:修改_config.yml文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4%E5%9B%9B-%E8%BF%9B%E5%85%A5%E8%B0%B7%E6%AD%8C%E7%AB%99%E9%95%BF%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%EF%BC%88%E9%9C%80%E8%A6%81%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%EF%BC%89"><span class="toc-text">步骤四:进入谷歌站长工具配置（需要科学上网）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%BE%E8%AE%B0"><span class="toc-text">尾记</span></a></li></ol>
     </div>
   </section>
 
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/comment/" style="font-size: 14px; color: #999">comment</a> <a href="/tags/ejs/" style="font-size: 14px; color: #999">ejs</a> <a href="/tags/github/" style="font-size: 14px; color: #999">github</a> <a href="/tags/google/" style="font-size: 14px; color: #999">google</a> <a href="/tags/hexo/" style="font-size: 24px; color: #555">hexo</a> <a href="/tags/html/" style="font-size: 14px; color: #999">html</a> <a href="/tags/js/" style="font-size: 17.33px; color: #828282">js</a> <a href="/tags/linux/" style="font-size: 17.33px; color: #828282">linux</a> <a href="/tags/node/" style="font-size: 14px; color: #999">node</a> <a href="/tags/npm/" style="font-size: 14px; color: #999">npm</a> <a href="/tags/sitemap/" style="font-size: 14px; color: #999">sitemap</a> <a href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 17.33px; color: #828282">云服务器</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 20.67px; color: #6c6c6c">博客</a> <a href="/tags/%E5%8F%AF%E9%81%93%E4%BA%91/" style="font-size: 17.33px; color: #828282">可道云</a> <a href="/tags/%E5%9F%9F%E5%90%8D/" style="font-size: 14px; color: #999">域名</a> <a href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/" style="font-size: 14px; color: #999">阿里云</a>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-
-<section class="widget qrcode shadow desktop mobile">
-  
-
-  <div class='content article-entry'>
-    
-      <img src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/qrcode/github@volantis.png'
-      
-        height='64px'
-      />
-    
-      <img src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/qrcode/github@volantis.png'
-      
-        height='64px'
-      />
-    
-  </div>
-</section>
 
   
 
 
 </aside>
+
 
 
 		  
@@ -773,8 +795,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="如何让谷歌收录你的网站";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   // header 这里无论是否开启pjax都需要
