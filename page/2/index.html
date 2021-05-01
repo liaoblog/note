@@ -939,8 +939,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Thu Apr 29 2021 22:27:11 GMT+0800 (GMT+08:00)</div>
-            <div id="last-update-show">2021-04-29 日</div>
+            <div id="last-update" style="display: none;">Sat May 01 2021 11:12:16 GMT+0800 (GMT+08:00)</div>
+            <div id="last-update-show">2021-05-01 日</div>
           
         </div>
         
@@ -990,7 +990,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           try {
             document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
           } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2021-04-29 日';
+            document.getElementById('last-update-show').innerHTML = '2021-05-01 日';
           }
         </script>
         
@@ -1510,36 +1510,54 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-  <script>
-  function load_twikoo() {
-	
-	  loadScript('https://cdn.jsdelivr.net/npm/twikoo@latest', pjax_twikoo)
-	
+  
+  
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4/dist/Valine.min.js"></script>
+
+
+<script>
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
   }
-  function pjax_twikoo() {
-    if(!document.querySelectorAll("#twikoo_container")[0])return;
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+    let pagePlaceholder = pdata.commentPlaceholder || "快来留言吧~";
     let path = pdata.commentPath;
     if (path.length == 0) {
       let defaultPath = '';
-      path = defaultPath || "decodeURI(window.location.pathname)"; //神奇的pathname
+      path = defaultPath || decodeURI(window.location.pathname);
     }
-    twikoo.init(Object.assign({"js":"https://cdn.jsdelivr.net/npm/twikoo@latest","path":null,"envId":"xxxxxxxxxxxxxxx"}, {
-	  el: '#twikoo_container',
-	  path: path,
+    var valine = new Valine();
+    valine.init(Object.assign({"js":"https://cdn.jsdelivr.net/npm/valine@1.4/dist/Valine.min.js","path":null,"placeholder":"快来留言吧~","appId":"ijI93uAT9BXqVc2SkB0DlUMx-gzGzoHsz","appKey":"y2ImcERaw9vj4wCzXle1pILP","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":false}, {
+      el: '#valine_container',
+      path: path,
+      placeholder: pagePlaceholder,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps,
     }))
   }
   $(function () {
-    if(!document.querySelectorAll("#twikoo_container")[0])return;
-    load_twikoo();
+    pjax_valine();
   });
-   volantis.pjax.push(()=>{
-	  if (typeof twikoo == "undefined") {
-		load_twikoo();
-	  } else {
-		pjax_twikoo();
-	  }
-   },'twikoo');
+  volantis.pjax.push(pjax_valine);
 </script>
+
 
 
 
