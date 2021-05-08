@@ -24,7 +24,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>标签：博客 - Xnote</title>
+  <title>分类：后端 - Xnote</title>
   
 
   
@@ -603,6 +603,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
         
+          
+        
       
     
     
@@ -616,15 +618,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title" >
-      <a href="/hexo/hexoThree.html">
-        个人博客搭建记录日志-更换主题
+      <a href="/code/javaNote1.html">
+        Java笔记1-基本数据类型
       </a>
     </h2>
   
   <div class='md'>
     
       
-        操作步骤1.登录到https://hexo.io/themes 寻找到合适的开源主题2.点击跳转到github下载源码zip3.解压，放到 C:\用户\你的用户名\blog\themes 下 4.打开blog目录下的 _config.yml 配置文件，打开找到 theme: 在其后写放到themes文件夹下的主题名字5.打开 Git-Bash 输入 cd blog 进入目录6.输入 hexo...
+        Java 基本数据类型变量就是申请内存来存储值。也就是说，当创建变量的时候，需要在内存中申请空间。内存管理系统根据变量的类型为变量分配存储空间，分配的空间只能用来储存该类型数据。因此，通过定义不同类型的变量，可以在内存中储存整数、小数或者字符。Java 的两大数据类型:
+内置数据类型引用数据类型 点击展开 
+              
+              Java语言提供了八种基本...
       
     
   </div>
@@ -632,15 +637,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time>2020-08-09</time>
+        <time>2021-05-08</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/hexo/">hexo</a>
+          <a class="category-link" href="/categories/%E5%90%8E%E7%AB%AF/">后端</a>
         
       </div>
       
         <div>
-          <a class='readmore' href='/hexo/hexoThree.html'>
+          <a class='readmore' href='/code/javaNote1.html'>
             阅读全文
           </a>
         </div>
@@ -662,15 +667,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title" >
-      <a href="/hexo/hexoTwo.html">
-        个人博客搭建记录日志-github托管
+      <a href="/code/NodeLR.html">
+        Node版本的升级和降级
       </a>
     </h2>
   
   <div class='md'>
     
       
-        操作步骤1.登录github创建储存库，名称：github用户名.github.io2.打开 Git-Bash 输入 cd blog进入目录3.安装github部署插件，输入 cnpm install hexo-deployer-git --save 回车4.打开配置_config.yml文件，路径：blog目录下5.打开后，文件的最底部，在type:后面加上git（type: git）—冒...
+        在开发的工程中，我们可能需要经常切换node版本来应对不同的开发环境，所以需要经常使用不同版本的node一、安装npm插件n ,通过n模块来管理node版本
+正文1、全局安装n模块npm instlal -g n2、安装当前稳定版本n stable或者sudo n stable3、安装最新版本的n latest或者sudo n latest4、安装指定版本的noden v8.16.05、卸载...
       
     
   </div>
@@ -678,15 +684,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time>2020-08-07</time>
+        <time>2021-02-08</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/hexo/">hexo</a>
+          <a class="category-link" href="/categories/%E5%90%8E%E7%AB%AF/">后端</a>
         
       </div>
       
         <div>
-          <a class='readmore' href='/hexo/hexoTwo.html'>
+          <a class='readmore' href='/code/NodeLR.html'>
             阅读全文
           </a>
         </div>
@@ -708,16 +714,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title" >
-      <a href="/hexo/hexoOne.html">
-        个人博客搭建记录日志-基础搭建
+      <a href="/code/kdy2.html">
+        更换可道云储存地址为挂载硬盘
       </a>
     </h2>
   
   <div class='md'>
     
       
-        利用到的工具和环境win10环境和hexo博客框架工具下载链接位于文章尾部 1.node.js 2.git 
-操作步骤1.安装node.js (建议安装v12.14.0版本)2.成功后win+R打开运行，输入cmd，回车 3.在控制台输入 node -v 可查看版本验证是否安装成功 4.安装包管理器，输入 npm install -g cnpm –registry=https://regis...
+        自建服务器的空间有限，玩客云有usb接口，我接了一个u盘，硬盘也是可以的，下面开始操作步骤（此文章为自建服务器更换储存设备教程，对云服务器使用者并无帮助）
+准备工作1.需要一个外接储存设备2.储存设备必须是ext4格式的，linux系统必须是ext格式，否则将会挂载失败，普通u盘或是硬盘不是此格式，需要使用硬盘格式工具进行修改
+挂载硬盘1.插入硬盘到设备上2.进入ssh，连接上服务器3.查看...
       
     
   </div>
@@ -725,15 +732,62 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time>2020-08-07</time>
+        <time>2021-02-01</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/hexo/">hexo</a>
+          <a class="category-link" href="/categories/%E5%90%8E%E7%AB%AF/">后端</a>
         
       </div>
       
         <div>
-          <a class='readmore' href='/hexo/hexoOne.html'>
+          <a class='readmore' href='/code/kdy2.html'>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/code/kdy1.html">
+        自建服务器搭建可道云
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        某宝买了一个玩客云，店家直接帮刷了linux-ubuntu系统，自带的ssh和宝塔，使用手册，玩客云全天侯开机一个月电费不到5块钱，利用玩客云搭建一个本地服务器，再使用内网穿透，搭建一个外网访问的云服务器
+正文1.可道云依赖php,最后php7以上，这里安装了php7.22.添加站点3.文本框填入你的域名，这里填了卖家送的域名，根目录默认，php选择刚刚安装的php版本4.点击进入根目录5....
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-01-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%90%8E%E7%AB%AF/">后端</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/code/kdy1.html'>
             阅读全文
           </a>
         </div>

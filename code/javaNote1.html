@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -24,7 +22,9 @@
 
   <!-- 页面元数据 -->
   
-  <title>分类：开发相关 - Xnote</title>
+  <title>Java笔记1-基本数据类型 - Xnote</title>
+  
+    <meta name="keywords" content="java,后端,开发">
   
 
   
@@ -513,7 +513,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="full" class='cover-wrapper  dock' style="display: none;">
+        <div id="full" class='cover-wrapper post dock' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture"></div>
           
@@ -588,225 +588,177 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper" id="pjax-container">
           
 
-
 <div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   
+
+
+  
+  <div class="article-meta" id="top">
     
-      
-  <section class="post-list">
     
-      
+    
+      <h1 class="title">
+        Java笔记1-基本数据类型
+      </h1>
+      <div class='new-meta-box'>
         
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/noteimg.png">
+    <p>XGS</p>
+  </a>
+</div>
+
           
         
           
-        
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E5%90%8E%E7%AB%AF/">后端</a>
+    </a>
+  </div>
+
+
           
         
           
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年5月8日</p>
+  </a>
+</div>
+
+          
         
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
       
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/code/NodeLR.html">
-        Node版本的升级和降级
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        在开发的工程中，我们可能需要经常切换node版本来应对不同的开发环境，所以需要经常使用不同版本的node一、安装npm插件n ,通过n模块来管理node版本
-正文1、全局安装n模块npm instlal -g n2、安装当前稳定版本n stable或者sudo n stable3、安装最新版本的n latest或者sudo n latest4、安装指定版本的noden v8.16.05、卸载...
-      
-    
+      <div id="lc-pv" data-title="Java笔记1-基本数据类型" data-path="/code/javaNote1.html">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-02-08</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3/">开发相关</a><span class="sep"></span><a class="category-link" href="/categories/%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3/%E5%90%8E%E7%AB%AF/">后端</a>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  
+  <h3 id="Java-基本数据类型"><a href="#Java-基本数据类型" class="headerlink" title="Java 基本数据类型"></a>Java 基本数据类型</h3><p>变量就是申请内存来存储值。也就是说，当创建变量的时候，需要在内存中申请空间。<br>内存管理系统根据变量的类型为变量分配存储空间，分配的空间只能用来储存该类型数据。<br><img src="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/Java1-1.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/Java1-1.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="><br>因此，通过定义不同类型的变量，可以在内存中储存整数、小数或者字符。<br>Java 的两大数据类型:</p>
+<div class="tabs" id="tab-id"><ul class="nav-tabs"><li class="tab active"><a class="#tab-id-1">内置数据类型</a></li><li class="tab"><a class="#tab-id-2">引用数据类型</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-id-1"><details yellow><summary> 点击展开 </summary>
+              <div class='content'>
+              <p>Java语言提供了八种基本类型。六种数字类型（四个整数型，两个浮点型），一种字符类型，还有一种布尔型。</p><p><code>byte</code>：<br>byte 数据类型是8位、有符号的，以二进制补码表示的整数；<br>最小值是 -128（-2^7）；<br>最大值是 127（2^7-1）；<br>默认值是 0；<br>byte 类型用在大型数组中节约空间，主要代替整数，因为 byte 变量占用的空间只有 int 类型的四分之一；<br>例子：byte a = 100，byte b = -50。</p><p><code>short</code>：<br>short 数据类型是 16 位、有符号的以二进制补码表示的整数<br>最小值是 -32768（-2^15）；<br>最大值是 32767（2^15 - 1）；<br>Short 数据类型也可以像 byte 那样节省空间。一个short变量是int型变量所占空间的二分之一；<br>默认值是 0；<br>例子：short s = 1000，short r = -20000。</p><p><code>int</code>：<br>int 数据类型是32位、有符号的以二进制补码表示的整数；<br>最小值是 -2,147,483,648（-2^31）；<br>最大值是 2,147,483,647（2^31 - 1）；<br>一般地整型变量默认为 int 类型；<br>默认值是 0 ；<br>例子：int a = 100000, int b = -200000。</p><p><code>long</code>：<br>long 数据类型是 64 位、有符号的以二进制补码表示的整数；<br>最小值是 -9,223,372,036,854,775,808（-2^63）；<br>最大值是 9,223,372,036,854,775,807（2^63 -1）；<br>这种类型主要使用在需要比较大整数的系统上；<br>默认值是 0L；<br>例子： long a = 100000L，Long b = -200000L。<br>“L”理论上不分大小写，但是若写成”l”容易与数字”1”混淆，不容易分辩。所以最好大写。</p><p><code>float</code>：<br>float 数据类型是单精度、32位、符合IEEE 754标准的浮点数；<br>float 在储存大型浮点数组的时候可节省内存空间；<br>默认值是 0.0f；<br>浮点数不能用来表示精确的值，如货币；<br>例子：float f1 = 234.5f。</p><p><code>double</code>：<br>double 数据类型是双精度、64 位、符合 IEEE 754 标准的浮点数；<br>浮点数的默认类型为 double 类型；<br>double类型同样不能表示精确的值，如货币；<br>默认值是 0.0d，例子：<br>double   d1  = 7D ;<br>double   d2  = 7.;<br>double   d3  =  8.0;<br>double   d4  =  8.D;<br>double   d5  =  12.9867;<br>7 是一个 int 字面量，而 7D，7. 和 8.0 是 double 字面量。</p><p><code>boolean</code>：<br>boolean数据类型表示一位的信息；<br>只有两个取值：true 和 false；<br>这种类型只作为一种标志来记录 true/false 情况；<br>默认值是 false；<br>例子：boolean one = true。</p><p><code>char</code>：<br>char 类型是一个单一的 16 位 Unicode 字符；<br>最小值是 \u0000（十进制等效值为 0）；<br>最大值是 \uffff（即为 65535）；<br>char 数据类型可以储存任何字符；<br>例子：char letter = ‘A’;。</p>
+              </div>
+            </details></div><div class="tab-pane" id="tab-id-2"><details yellow><summary> 点击展开 </summary>
+              <div class='content'>
+              <p>在Java中，引用类型的变量非常类似于C/C++的指针。引用类型指向一个对象，指向对象的变量是引用变量。这些变量在声明时被指定为一个特定的类型，比如 Employee、Puppy 等。变量一旦声明后，类型就不能被改变了。<br>对象、数组都是引用数据类型。<br>所有引用类型的默认值都是null。<br>一个引用变量可以用来引用任何与之兼容的类型。<br>例子：<code>Site site = new Site(&quot;Runoob&quot;)</code>。</p>
+              </div>
+            </details></div></div></div>
+
+<h3 id="Java-常量"><a href="#Java-常量" class="headerlink" title="Java 常量"></a>Java 常量</h3><div class="tabs" id="tab-id"><ul class="nav-tabs"><li class="tab active"><a class="#tab-id-1">常量</a></li><li class="tab"><a class="#tab-id-2">特殊的转义字符序列</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-id-1"><details yellow><summary> 点击展开 </summary>
+              <div class='content'>
+              <ol><li>常量在程序运行时是不能被修改的。<br>在 Java 中使用 final 关键字来修饰常量，声明方式和变量类似：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">final double PI &#x3D; 3.1415927;</span><br></pre></td></tr></table></figure></li><li>虽然常量名也可以用小写，但为了便于识别，通常使用大写字母表示常量。<br>字面量可以赋给任何内置类型的变量。例如：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">byte a &#x3D; 68;</span><br><span class="line">char a &#x3D; &#39;A&#39;</span><br></pre></td></tr></table></figure></li><li>byte、int、long、和short都可以用十进制、16进制以及8进制的方式来表示。<br>当使用字面量的时候，前缀 0 表示 8 进制，而前缀 0x 代表 16 进制, 例如：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int decimal &#x3D; 100;</span><br><span class="line">int octal &#x3D; 0144;</span><br><span class="line">int hexa &#x3D;  0x64;</span><br></pre></td></tr></table></figure></li><li>和其他语言一样，Java的字符串常量也是包含在两个引号之间的字符序列。下面是字符串型字面量的例子：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;Hello World&quot;</span><br><span class="line">&quot;two\nlines&quot;</span><br><span class="line">&quot;\&quot;This is in quotes\&quot;&quot;</span><br></pre></td></tr></table></figure></li><li>字符串常量和字符常量都可以包含任何Unicode字符。例如：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">char a &#x3D; &#39;\u0001&#39;;</span><br><span class="line">String a &#x3D; &quot;\u0001&quot;;</span><br></pre></td></tr></table></figure></li></ol>
+              </div>
+            </details></div><div class="tab-pane" id="tab-id-2"><details yellow><summary> 点击展开 </summary>
+              <div class='content'>
+              <p>\n    换行 (0x0a)<br>\r    回车 (0x0d)<br>\f    换页符(0x0c)<br>\b    退格 (0x08)<br>\0    空字符 (0x0)<br>\s    空格 (0x20)<br>\t    制表符<br>&quot;    双引号<br>&#39;    单引号<br>\    反斜杠<br>\ddd    八进制字符 (ddd)<br>\uxxxx    16进制Unicode字符 (xxxx)</p>
+              </div>
+            </details></div></div></div>
+
+<h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><p>整型、实型（常量）、字符型数据可以混合运算。运算中，不同类型的数据先转化为同一类型，然后进行运算。<br>转换从低级到高级。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">低  ------------------------------------&gt;  高</span><br><span class="line">byte,short,char—&gt; int —&gt; long—&gt; float —&gt; double </span><br></pre></td></tr></table></figure>
+<p>数据类型转换必须满足如下规则：</p>
+<ol>
+<li>不能对boolean类型进行类型转换。</li>
+<li>不能把对象类型转换成不相关类的对象。</li>
+<li>在把容量大的类型转换为容量小的类型时必须使用强制类型转换。</li>
+<li>转换过程中可能导致溢出或损失精度，例如：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int i &#x3D;128;   </span><br><span class="line">byte b &#x3D; (byte)i;</span><br></pre></td></tr></table></figure>
+因为 byte 类型是 8 位，最大值为127，所以当 int 强制转换为 byte 类型时，值 128 时候就会导致溢出。</li>
+<li>浮点数到整数的转换是通过舍弃小数得到，而不是四舍五入，例如：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(int)23.7 &#x3D;&#x3D; 23;        </span><br><span class="line">(int)-45.89f &#x3D;&#x3D; -45</span><br></pre></td></tr></table></figure>
+<div class="tabs" id="tab-id"><ul class="nav-tabs"><li class="tab active"><a class="#tab-id-1">自动类型转换</a></li><li class="tab"><a class="#tab-id-2">强制类型转换</a></li><li class="tab"><a class="#tab-id-3">隐含强制类型转换</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-id-1"><details yellow><summary> 点击展开 </summary>
+              <div class='content'>
+              <p>必须满足转换前的数据类型的位数要低于转换后的数据类型，例如: short数据类型的位数为16位，就可以自动转换位数为32的int类型，同样float数据类型的位数为32，可以自动转换为64位的double类型。<br>实例:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class ZiDongLeiZhuan&#123;</span><br><span class="line">        public static void main(String[] args)&#123;</span><br><span class="line">            char c1&#x3D;&#39;a&#39;;&#x2F;&#x2F;定义一个char类型</span><br><span class="line">            int i1 &#x3D; c1;&#x2F;&#x2F;char自动类型转换为int</span><br><span class="line">            System.out.println(&quot;char自动类型转换为int后的值等于&quot;+i1);</span><br><span class="line">            char c2 &#x3D; &#39;A&#39;;&#x2F;&#x2F;定义一个char类型</span><br><span class="line">            int i2 &#x3D; c2+1;&#x2F;&#x2F;char 类型和 int 类型计算</span><br><span class="line">            System.out.println(&quot;char类型和int计算后的值等于&quot;+i2);</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>运行结果为:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">char自动类型转换为int后的值等于97</span><br><span class="line">char类型和int计算后的值等于66</span><br></pre></td></tr></table></figure><p>解析：c1 的值为字符 a ,查 ASCII 码表可知对应的 int 类型值为 97， A 对应值为 65，所以 i2=65+1=66。</p>
+              </div>
+            </details></div><div class="tab-pane" id="tab-id-2"><details yellow><summary> 点击展开 </summary>
+              <div class='content'>
+              <ol><li>条件是转换的数据类型必须是兼容的。</li><li>格式：(type)value type是要强制类型转换后的数据类型 实例：<br>实例:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class QiangZhiZhuanHuan&#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        int i1 &#x3D; 123;</span><br><span class="line">        byte b &#x3D; (byte)i1;&#x2F;&#x2F;强制类型转换为byte</span><br><span class="line">        System.out.println(&quot;int强制类型转换为byte后的值等于&quot;+b);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>运行结果：<br>int强制类型转换为byte后的值等于123</li></ol>
+              </div>
+            </details></div><div class="tab-pane" id="tab-id-3"><details yellow><summary> 点击展开 </summary>
+              <div class='content'>
+              <ol><li>整数的默认类型是 int。</li><li>浮点型不存在这种情况，因为在定义 float 类型时必须在数字后面跟上 F 或者 f。</li></ol>
+              </div>
+            </details></div></div></div></li>
+</ol>
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/code/NodeLR.html'>
-            阅读全文
-          </a>
-        </div>
+      
+      
       
     </div>
   
+  
+    
 
-</div>
 
-          </div>
-        
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/code/kdy2.html">
-        更换可道云储存地址为挂载硬盘
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        自建服务器的空间有限，玩客云有usb接口，我接了一个u盘，硬盘也是可以的，下面开始操作步骤（此文章为自建服务器更换储存设备教程，对云服务器使用者并无帮助）
-准备工作1.需要一个外接储存设备2.储存设备必须是ext4格式的，linux系统必须是ext格式，否则将会挂载失败，普通u盘或是硬盘不是此格式，需要使用硬盘格式工具进行修改
-挂载硬盘1.插入硬盘到设备上2.进入ssh，连接上服务器3.查看...
-      
-    
+    </div>
   </div>
+
+
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-02-01</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3/">开发相关</a><span class="sep"></span><a class="category-link" href="/categories/%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3/%E5%90%8E%E7%AB%AF/">后端</a>
-        
-      </div>
+  
+
+  
+    <div class="prev-next">
       
-        <div>
-          <a class='readmore' href='/code/kdy2.html'>
-            阅读全文
-          </a>
-        </div>
+      
+        <a class='next' href='/hexo/hexoFolder.html'>
+          <p class='title'>hexo指定文章生成的目录<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>hexo博客默认的文章路径是 域名/年/月/日/文章名称，这样的多层目录搜索引擎爬虫爬起来非常费力，我们则需要优化文章的URL路径，达到我们优化seo的效果，以及自己想要的指定目录来达成美观且目...</p>
+        </a>
       
     </div>
   
+</article>
 
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
 </div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/code/kdy1.html">
-        自建服务器搭建可道云
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        某宝买了一个玩客云，店家直接帮刷了linux-ubuntu系统，自带的ssh和宝塔，使用手册，玩客云全天侯开机一个月电费不到5块钱，利用玩客云搭建一个本地服务器，再使用内网穿透，搭建一个外网访问的云服务器
-正文1.可道云依赖php,最后php7以上，这里安装了php7.22.添加站点3.文本框填入你的域名，这里填了卖家送的域名，根目录默认，php选择刚刚安装的php版本4.点击进入根目录5....
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-01-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3/">开发相关</a><span class="sep"></span><a class="category-link" href="/categories/%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3/%E5%90%8E%E7%AB%AF/">后端</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/code/kdy1.html'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/hexo/webTime.html">
-        简单的添加网站运行时间
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        修改footer.ejs文件1.文件位于themes/fluid/layout/partial ,你只需要在里面加一个div标签就可以了，里面原本是有两个div标签，你放的顺序影响着显示的顺序。直接将下列代码复制即可
-123456789101112131415161718192021222324252627282930&lt;div&gt;     &lt;span id=&quot;tim...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-21</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3/">开发相关</a><span class="sep"></span><a class="category-link" href="/categories/%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/">前端</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/hexo/webTime.html'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-  
+  </article>
 
 
-    
-  
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -814,285 +766,28 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
 
-<section class="widget text shadow desktop mobile">
-  
-  <header>
-    
-      <i class="fas fa-bullhorn fa-fw" aria-hidden="true"></i><span class='name'>公告</span>
-    
-  </header>
 
 
-  <div class='content'>
-    
-      <p>本站默认替换了右键菜单，恢复原始右键菜单请按住Ctrl再点击鼠标右键</p>
-
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/noteimg.png'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">Xnote</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/"
-              class="social fas fa-heart flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:2803349149@qq.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/liaoblog/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop">
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/hexo/" href="/categories/hexo/"
-            id="categorieshexo"
-            ><div class='name'>hexo</div><div class='badge'>(12)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3/" href="/categories/%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3/"
-            id="categoriesE5BC80E58F91E79BB8E585B3"
-            ><div class='name'>开发相关</div><div class='badge'>(4)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/" href="/categories/%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/"
-            id="categoriesE5BC80E58F91E79BB8E585B3E5898DE7ABAF"
-            ><div class='name'>前端</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3/%E5%90%8E%E7%AB%AF/" href="/categories/%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3/%E5%90%8E%E7%AB%AF/"
-            id="categoriesE5BC80E58F91E79BB8E585B3E5908EE7ABAF"
-            ><div class='name'>后端</div><div class='badge'>(3)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Java-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">Java 基本数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java-%E5%B8%B8%E9%87%8F"><span class="toc-text">Java 常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-text">类型转换</span></a></li></ol>
     </div>
   </section>
 
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/comment/" style="font-size: 14px; color: #999">comment</a> <a href="/tags/ejs/" style="font-size: 14px; color: #999">ejs</a> <a href="/tags/github/" style="font-size: 17.33px; color: #828282">github</a> <a href="/tags/google/" style="font-size: 14px; color: #999">google</a> <a href="/tags/hexo/" style="font-size: 24px; color: #555">hexo</a> <a href="/tags/html/" style="font-size: 14px; color: #999">html</a> <a href="/tags/js/" style="font-size: 17.33px; color: #828282">js</a> <a href="/tags/jsDelivr/" style="font-size: 14px; color: #999">jsDelivr</a> <a href="/tags/linux/" style="font-size: 17.33px; color: #828282">linux</a> <a href="/tags/node/" style="font-size: 14px; color: #999">node</a> <a href="/tags/npm/" style="font-size: 14px; color: #999">npm</a> <a href="/tags/sitemap/" style="font-size: 14px; color: #999">sitemap</a> <a href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 17.33px; color: #828282">云服务器</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 20.67px; color: #6c6c6c">博客</a> <a href="/tags/%E5%8F%AF%E9%81%93%E4%BA%91/" style="font-size: 17.33px; color: #828282">可道云</a> <a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 14px; color: #999">图床</a> <a href="/tags/%E5%9F%9F%E5%90%8D/" style="font-size: 14px; color: #999">域名</a> <a href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/" style="font-size: 14px; color: #999">阿里云</a>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-
-<section class="widget shadow desktop">
-  
-  <header>
-    
-      <i class="fas fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>16 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>已运行时间：</div>
-          <div id="webinfo-runtime-count" publish_date="03/24/2020 21:34:09"></div>
-        </div>
-        <script>
-          var BirthDay = new Date(new Date('2021/04/28'));
-          var today = new Date();
-          var timeold = (today.getTime() - BirthDay.getTime());
-          var daysold = Math.floor(timeold / (24 * 60 * 60 * 1000));
-          document.getElementById('webinfo-runtime-count').innerHTML = daysold + ' 天';
-        </script>
-      
-
-
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站访客数：</div>
-          
-          <div><span id="lc-uv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 人</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站总访问量：</div>
-          
-          <div><span id="lc-sv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 次</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          
-            <div id="last-update" style="display: none;">Sat May 08 2021 22:22:55 GMT+0800 (GMT+08:00)</div>
-            <div id="last-update-show">2021-05-08 日</div>
-          
-        </div>
-        
-        <script>
-          function timeago(dateTimeStamp) {
-              var minute = 1000 * 60; //把分，时，天，周，半个月，一个月用毫秒表示
-              var hour = minute * 60;
-              var day = hour * 24;
-              var week = day * 7;
-              var month = day * 30;
-              var now = new Date().getTime(); //获取当前时间毫秒
-              var diffValue = now - dateTimeStamp; //时间差
-              if (diffValue < 0) {
-                  return;
-              }
-              var minC = diffValue / minute; //计算时间差的分，时，天，周，月
-              var hourC = diffValue / hour;
-              var dayC = diffValue / day;
-              var weekC = diffValue / week;
-              var monthC = diffValue / month;
-              if (monthC >= 1 && monthC <= 3) {
-                  result = " " + parseInt(monthC) + " 月前"
-              } else if (weekC >= 1 && weekC <= 3) {
-                  result = " " + parseInt(weekC) + " 周前"
-              } else if (dayC >= 1 && dayC <= 6) {
-                  result = " " + parseInt(dayC) + " 天前"
-              } else if (hourC >= 1 && hourC <= 23) {
-                  result = " " + parseInt(hourC) + " 小时前"
-              } else if (minC >= 1 && minC <= 59) {
-                  result = " " + parseInt(minC) + " 分钟前"
-              } else if (diffValue >= 0 && diffValue <= minute) {
-                  result = "刚刚"
-              } else {
-                  var datetime = new Date();
-                  datetime.setTime(dateTimeStamp);
-                  var Nyear = datetime.getFullYear();
-                  var Nmonth = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
-                  var Ndate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
-                  var Nhour = datetime.getHours() < 10 ? "0" + datetime.getHours() : datetime.getHours();
-                  var Nminute = datetime.getMinutes() < 10 ? "0" + datetime.getMinutes() : datetime.getMinutes();
-                  var Nsecond = datetime.getSeconds() < 10 ? "0" + datetime.getSeconds() : datetime.getSeconds();
-                  result = Nyear + "-" + Nmonth + "-" + Ndate
-              }
-              return result;
-          }
-          var lastUpDate = document.getElementById('last-update').innerHTML;
-          try {
-            document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
-          } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2021-05-08 日';
-          }
-        </script>
-        
-      
-    </div>
-  </div>
-</section>
 
   
 
 
 </aside>
+
 
 
 		  
@@ -1101,8 +796,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="Java笔记1-基本数据类型";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   // header 这里无论是否开启pjax都需要
