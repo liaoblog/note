@@ -104,7 +104,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
+<header id="l_header" class="l_header auto shadow show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -543,7 +543,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper docs dock' style="display: none;">
           
-            <div class='cover-bg lazyload placeholder' data-bg="https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture"></div>
+            <div id='cover-backstretch'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -617,7 +617,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 
 <div class='l_main no_sidebar'>
-  <article class="article post white-box reveal md shadow article-type-docs" id="docs" itemscope itemprop="blogPost">
+  <article class="article post white-box reveal md blur article-type-docs" id="docs" itemscope itemprop="blogPost">
   
 
 
@@ -634,7 +634,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <h3 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h3><p>摸鱼摸鱼<br>2021-3月建站，期间使用过fluid等主题，现在使用的是volantis主题。<br>谨以此站帮助正在浏览本网站的你以及烂记性的自己。</p>
 <h3 id="时间轴"><a href="#时间轴" class="headerlink" title="时间轴"></a>时间轴</h3><div class="timeline">
 <div class="timenode"><div class="meta"><p><p>2021-05-17</p>
-</p></div><div class="body"><ol><li>更换托管到了<a target="_blank" rel="noopener" href="https://dash.cloudflare.com/">cloudflare</a>，2021.5.14<a target="_blank" rel="noopener" href="https://vercel.com/">vercel</a>突然无法访问，随即更换了托管平台</li><li>删除了侧边栏博主信息板块</li><li>更改了<a href="/tv/">电视台直播</a>页面的样式</li></ol></div></div>
+</p></div><div class="body"><ol><li>更换了背景图，主题yml文件的<code>backstretch</code>下的属性设为true，position设为fixed，images添加图片</li><li>将首页文章版块设为模糊半透明，导航栏正常，将主题yml文件<code>custom_css</code>的navbar属性设为shadow，sidebar和body设为blur</li><li>更改了鼠标样式，将主题yml文件<code>custom_css</code>的cursor属性改为true</li></ol></div></div>
+
+<div class="timenode"><div class="meta"><p><p>2021-05-16</p>
+</p></div><div class="body"><ol><li>更换托管到了<a target="_blank" rel="noopener" href="https://dash.cloudflare.com/">cloudflare</a>，2021.5.14<a target="_blank" rel="noopener" href="https://vercel.com/">vercel</a>突然无法访问，随即更换了托管平台</li><li>删除了侧边栏博主信息版块</li><li>更改了<a href="/tv/">电视台直播</a>页面的样式</li></ol></div></div>
 
 <div class="timenode"><div class="meta"><p><p>2021-05-08</p>
 </p></div><div class="body"><ol><li>添加了一个代码复制弹窗通知功能，教程来自<a target="_blank" rel="noopener" href="https://colsrch.cn/posts/72bb5148/">Colsrch-如何给博客添加弹窗通知</a></li></ol></div></div>
@@ -684,7 +687,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
 
-  <article class="post white-box reveal shadow" id="comments">
+  <article class="post white-box reveal blur" id="comments">
     <p ct><i class='fas fa-comments'></i> 评论</p>
     
     <div id="valine_container" class="valine_thread">
@@ -956,6 +959,41 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 <!-- internal -->
+
+  
+  
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+        var imgs=["https://cdn.jsdelivr.net/gh/inkss/common@master/hexo/img/bkg/wallhaven-288dg6.png"];
+        if ('true' == 'true') {
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
+            }
+          }
+          shuffle(imgs);
+        }
+	  function Pjax_backstretch(){
+        
+          $.backstretch(
+            imgs,
+          {
+            duration: "10000",
+            fade: "1500"
+          });
+        
+	  }
+	  loadScript("https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js",Pjax_backstretch)
+    </script>
+  
 
 
 
