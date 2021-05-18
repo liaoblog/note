@@ -22,9 +22,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>Node版本的升级和降级 - Xnote</title>
-  
-    <meta name="keywords" content="node,npm">
+  <title>Xnote</title>
   
 
   
@@ -113,8 +111,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <p class="title"></p>
       <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
         <li><a id="s-comment" class="fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
-        
-          <li><a id="s-toc" class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
         
       </ul>
     </div>
@@ -545,7 +541,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="full" class='cover-wrapper post dock' style="display: none;">
+        <div id="full" class='cover-wrapper page dock' style="display: none;">
           
             <div id='cover-backstretch'></div>
           
@@ -620,8 +616,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper" id="pjax-container">
           
 
-<div class='l_main'>
-  <article class="article post white-box reveal md blur article-type-post" id="post" itemscope itemprop="blogPost">
+<div class='l_main no_sidebar'>
+  <article class="article post white-box reveal md blur article-type-page" id="page" itemscope itemprop="blogPost">
   
 
 
@@ -630,94 +626,35 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
     
-      <h1 class="title">
-        Node版本的升级和降级
-      </h1>
-      <div class='new-meta-box'>
-        
-          
-            
-<div class='new-meta-item author'>
-  <a class='author' href="/" rel="nofollow">
-    <img no-lazy src="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/noteimg.png">
-    <p>XGS</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E5%90%8E%E7%AB%AF/">后端</a>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2021年2月8日</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  <div class="new-meta-item browse leancloud">
-    <a class='notlink'>
-      
-      <div id="lc-pv" data-title="Node版本的升级和降级" data-path="/code/NodeLR.html">
-        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
-        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
-        次浏览
-      </div>
-    </a>
-  </div>
-
-
-          
-        
-      </div>
-    
   </div>
 
 
   
   
-  <p>在开发的工程中，我们可能需要经常切换node版本来应对不同的开发环境，所以需要经常使用不同版本的node<br>一、安装npm插件n ,通过n模块来管理node版本</p>
-<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>1、全局安装n模块<br><code>npm instlal -g n</code><br>2、安装当前稳定版本<br><code>n stable或者sudo n stable</code><br>3、安装最新版本的<br><code>n latest或者sudo n latest</code><br>4、安装指定版本的node<br><code>n v8.16.0</code><br>5、卸载指定的node版本<br><code>n rm v8.16.0</code><br>二、使用nvm管理node版本<br>1、安装nvm<br><code>brew install nvm</code><br>2、使用nvm安装node版本<br>安装最新版本<br><code>nvm isntall node</code><br>安装指定版本<br><code>nvm install 8.16.0</code><br>3、查看所有版本<br><code>nvm ls</code><br>4、切换node版本<br>使用最新版本<br><code>nvm use node</code><br>使用指定版本<br><code>nvm use 10.16.2</code><br>通常我会使用第二种方式<br>例如：我在一个项目中使用的是node6.13.2,新项目使用的是node8.16.0,<br>先要安装<code>node@8.16.0，nvm install 8.16.0</code>，<br>然后，<code>nvm use 8.16.0</code></p>
-
+  <div class="tabs" id="tab-id"><ul class="nav-tabs"><li class="tab active"><a class="#tab-id-1">电影</a></li><li class="tab"><a class="#tab-id-2">动漫</a></li><li class="tab"><a class="#tab-id-3">电视剧</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-id-1"><div class="btns circle grid5">
+            <a class="button" target="_blank" rel="noopener" href='https://baike.baidu.com/item/%E6%88%91%E6%98%AF%E5%B1%B1%E5%A7%86' title='我是山姆'><img src='https://puui.qpic.cn/vcover_vt_pic/0/vox06nwx47wuy5t1523599562/260'>我是山姆</a>
+<a class="button" target="_blank" rel="noopener" href='https://baike.baidu.com/item/%E5%8D%97%E6%9E%81%E4%B9%8B%E6%81%8B/22313720?fr=aladdin' title='南极之恋'><img src='https://puui.qpic.cn/vcover_vt_pic/0/sdmcdbqecsgbqpq1514943903/260'>南极之恋</a>
+<a class="button" target="_blank" rel="noopener" href='https://baike.baidu.com/item/%E9%81%97%E6%84%BF%E6%B8%85%E5%8D%95/9903967?fr=aladdin' title='遗愿清单'><img src='https://puui.qpic.cn/vcover_vt_pic/0/aoyweiuhnwo6ri01570516693/260'>遗愿清单</a>
+<a class="button" target="_blank" rel="noopener" href='https://baike.baidu.com/item/%E7%81%AB%E6%98%9F%E6%95%91%E6%8F%B4/17537083?fr=aladdin' title='火星救援'><img src='https://puui.qpic.cn/vcover_vt_pic/0/gk11svuomdpsgl41567586887/260'>火星救援</a>
+<a class="button" target="_blank" rel="noopener" href='https://baike.baidu.com/item/%E8%82%96%E7%94%B3%E5%85%8B%E7%9A%84%E6%95%91%E8%B5%8E/30307?fr=aladdin' title='肖申克的救赎'><img src='https://puui.qpic.cn/vcover_vt_pic/0/1o29ui77e85grdr1567129471/260'>肖申克的救赎</a>
+<a class="button" target="_blank" rel="noopener" href='https://baike.baidu.com/item/%E5%BC%B1%E7%82%B9/2763633?fr=aladdin' title='弱点'><img src='https://puui.qpic.cn/vcover_vt_pic/0/ugkttnywlcyooqz1568111078/260'>弱点</a>
+<a class="button" target="_blank" rel="noopener" href='https://baike.baidu.com/item/%E4%BD%95%E4%BB%A5%E4%B8%BA%E5%AE%B6/23379351?fr=aladdin' title='何以为家'><img src='https://puui.qpic.cn/vcover_vt_pic/0/eaa7qkjmlecfnp11560158313/260'>何以为家</a>
+<a class="button" target="_blank" rel="noopener" href='https://baike.baidu.com/item/%E7%96%BE%E9%80%9F%E8%BF%BD%E6%9D%80/14903688?fr=aladdin' title='疾速追杀'><img src='https://puui.qpic.cn/vcover_vt_pic/0/sdp0010051qa2q4/260'>疾速追杀</a>
+<a class="button" target="_blank" rel="noopener" href='https://baike.baidu.com/item/%E5%BD%93%E5%B9%B8%E7%A6%8F%E6%9D%A5%E6%95%B2%E9%97%A8/5958?fr=aladdin' title='当幸福来敲门'><img src='https://puui.qpic.cn/vcover_vt_pic/0/vbr7hkoebjpsrxb1567134011/260'>当幸福来敲门</a>
+<a class="button" target="_blank" rel="noopener" href='https://baike.baidu.com/item/%E5%AE%8C%E7%BE%8E%E7%9A%84%E4%B8%96%E7%95%8C/7562306?fr=aladdin' title='完美的世界'><img src='https://puui.qpic.cn/vcover_vt_pic/0/68m6s2drn3o4bjzt1444738763.jpg/260'>完美的世界</a>
+<a class="button" target="_blank" rel="noopener" href='https://baike.baidu.com/item/%E6%9C%80%E8%90%8C%E8%AD%A6%E6%8E%A2/23180870?fr=aladdin' title='最萌警探'><img src='https://puui.qpic.cn/vcover_vt_pic/0/9t2d8g3kycwkqt51559740426/260'>最萌警探</a>
+<a class="button" target="_blank" rel="noopener" href='https://baike.baidu.com/item/%E4%B8%80%E6%9D%A1%E7%8B%97%E7%9A%84%E4%BD%BF%E5%91%BD/19878386?fr=aladdin' title='一条狗的使命'><img src='https://puui.qpic.cn/vcover_vt_pic/0/n760yxvaxaaosdq1557915181/260'>一条狗的使命</a>
+<a class="button" target="_blank" rel="noopener" href='https://baike.baidu.com/item/%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%B8%8E%E5%BC%97%E5%85%B0%E5%85%8B/6793101?fr=aladdin' title='机器人与弗兰克'><img src='https://puui.qpic.cn/vcover_vt_pic/0/nbficb1xr961yhh1523590597/260'>机器人与弗兰克</a>
+<a class="button" target="_blank" rel="noopener" href='https://baike.baidu.com/item/%E7%83%AD%E5%A4%A9%E5%8D%88%E5%90%8E/2503798?fr=aladdin' title='热天午后'><img src='https://puui.qpic.cn/vcover_vt_pic/0/f6s1oru49pdejy0t1463851958.jpg/260'>热天午后</a>
+<a class="button" target="_blank" rel="noopener" href='https://baike.baidu.com/item/%E7%A0%B4%E7%A2%8E%E4%BA%BA%E7%94%9F/19450994?fr=aladdin' title='破碎人生'><img src='https://puui.qpic.cn/vcover_vt_pic/0/ue9ho3o06y6kbp21497323846/260'>破碎人生</a>
+<a class="button" target="_blank" rel="noopener" href='https://baike.baidu.com/item/%E8%8D%92%E5%B2%9B%E4%BD%99%E7%94%9F/65468?fr=aladdin' title='荒岛余生'><img src='https://puui.qpic.cn/vcover_vt_pic/0/9uzc90pa9c4pm951572335459/260'>荒岛余生</a>
+<a class="button" target="_blank" rel="noopener" href='https://baike.baidu.com/item/%E6%98%9F%E9%99%85%E7%A9%BF%E8%B6%8A/7588527?fr=aladdin' title='星际穿越'><img src='https://puui.qpic.cn/vcover_vt_pic/0/c2seabnsfozypl81523522065/260'>星际穿越</a>
+          </div></div><div class="tab-pane" id="tab-id-2"><div class="btns circle grid5">
+            <a class="button" target="_blank" rel="noopener" href='https://baike.baidu.com/item/%E4%B8%80%E5%BF%B5%E6%B0%B8%E6%81%92/23299669?fr=aladdin' title='一念永恒'><img src='https://puui.qpic.cn/vcover_vt_pic/0/ww18u675tfmhas61619353696217/260'>一念永恒</a>
+          </div></div><div class="tab-pane" id="tab-id-3"><div class="btns circle grid5">
+            <a class="button" target="_blank" rel="noopener" href='https://baike.baidu.com/item/%E5%BA%86%E4%BD%99%E5%B9%B4/18023915?fr=aladdin' title='庆余年'><img src='https://puui.qpic.cn/vcover_vt_pic/0/rjae621myqca41h1574838571/260'>庆余年</a>
+          </div></div></div></div>
   
-  
-    
-    <div class='footer'>
-      
-      
-      
-        <div class='copyright'>
-          <blockquote>
-            
-              
-                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
-
-              
-            
-              
-                <p>本文永久链接是：<a href=https://note.xgamego.top/code/NodeLR.html>https://note.xgamego.top/code/NodeLR.html</a></p>
-              
-            
-          </blockquote>
-        </div>
-      
-      
-    </div>
   
   
     
@@ -726,76 +663,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='article-meta' id="bottom">
     <div class='new-meta-box'>
       
-        
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-08T23:44:30+08:00">
-  <a class='notlink'>
-    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2021年5月8日</p>
-  </a>
-</div>
-
-        
-      
-        
-          
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/node/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>node</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/npm/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>npm</p></a></div>
-
-
-        
-      
-        
-          
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://note.xgamego.top/code/NodeLR.html&title=Node版本的升级和降级 - Xnote&summary="
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://note.xgamego.top/code/NodeLR.html&title=Node版本的升级和降级 - Xnote&summary="
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://note.xgamego.top/code/NodeLR.html&title=Node版本的升级和降级 - Xnote&summary="
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
-          
-        </a>
-      
-    
-      
-    
-      
-    
-  </div>
-</div>
-
-
-
-        
-      
     </div>
   </div>
 
@@ -803,37 +670,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   
 
-  
-    <div class="prev-next">
-      
-        <a class='prev' href='/hexo/hexoFolder.html'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>hexo指定文章生成的目录</p>
-          <p class='content'>hexo博客默认的文章路径是 域名/年/月/日/文章名称，这样的多层目录搜索引擎爬虫爬起来非常费力，我们则需要优化文章的URL路径，达到我们优化seo的效果，以及自己想要的指定目录来达成美观且目...</p>
-        </a>
-      
-      
-        <a class='next' href='/code/kdy2.html'>
-          <p class='title'>更换可道云储存地址为挂载硬盘<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>自建服务器的空间有限，玩客云有usb接口，我接了一个u盘，硬盘也是可以的，下面开始操作步骤（此文章为自建服务器更换储存设备教程，对云服务器使用者并无帮助）
-准备工作1.需要一个外接储存设备2.储...</p>
-        </a>
-      
-    </div>
   
 </article>
-
-
-  
-
-  <article class="post white-box reveal blur" id="comments">
-    <p ct><i class='fas fa-comments'></i> 评论</p>
-    
-    <div id="valine_container" class="valine_thread">
-  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
-</div>
-
-  </article>
-
 
 
 
@@ -842,29 +680,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </div>
 <aside class='l_side'>
   
-  
-    
-    
-
-
-
-  <section class="widget toc-wrapper blur desktop mobile" id="toc-div" >
-    
-  <header>
-    
-      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
-    
-  </header>
-
-
-    <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E6%96%87"><span class="toc-text">正文</span></a></li></ol>
-    </div>
-  </section>
-
-
-  
-
 
 </aside>
 
@@ -876,8 +691,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   window.pdata={}
-  pdata.ispage=true;
-  pdata.postTitle="Node版本的升级和降级";
+  pdata.ispage=false;
+  pdata.postTitle="";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   // header 这里无论是否开启pjax都需要
