@@ -5857,3 +5857,6 @@ img.lazyload:not(.placeholder).loaded {
   margin: 0 auto;
   width: 100%;
 }
+#valine_container img {
+  width: auto;
+}
