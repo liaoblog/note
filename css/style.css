@@ -5852,3 +5852,7 @@ img.lazyload:not(.placeholder).loaded {
 #safearea {
   display: block;
 }
+.l_main .post img {
+  max-width: 500px;
+  margin: 0 auto;
+}
