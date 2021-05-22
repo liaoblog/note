@@ -676,7 +676,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
   
-  <h3 id="Java-基本数据类型"><a href="#Java-基本数据类型" class="headerlink" title="Java 基本数据类型"></a>Java 基本数据类型</h3><p>变量就是申请内存来存储值。也就是说，当创建变量的时候，需要在内存中申请空间。<br>内存管理系统根据变量的类型为变量分配存储空间，分配的空间只能用来储存该类型数据。<br><img src="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/Java1-1.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/Java1-1.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="><br>因此，通过定义不同类型的变量，可以在内存中储存整数、小数或者字符。<br>Java 的两大数据类型:</p>
+  <h2 id="Java-基本数据类型"><a href="#Java-基本数据类型" class="headerlink" title="Java 基本数据类型"></a>Java 基本数据类型</h2><p>变量就是申请内存来存储值。也就是说，当创建变量的时候，需要在内存中申请空间。<br>内存管理系统根据变量的类型为变量分配存储空间，分配的空间只能用来储存该类型数据。<br><img src="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/Java1-1.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/Java1-1.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="><br>因此，通过定义不同类型的变量，可以在内存中储存整数、小数或者字符。<br>Java 的两大数据类型:</p>
 <div class="tabs" id="tab-id"><ul class="nav-tabs"><li class="tab active"><a class="#tab-id-1">内置数据类型</a></li><li class="tab"><a class="#tab-id-2">引用数据类型</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-id-1"><details yellow><summary> 点击展开 </summary>
               <div class='content'>
               <p>Java语言提供了八种基本类型。六种数字类型（四个整数型，两个浮点型），一种字符类型，还有一种布尔型。</p><p><code>byte</code>：<br>byte 数据类型是8位、有符号的，以二进制补码表示的整数；<br>最小值是 -128（-2^7）；<br>最大值是 127（2^7-1）；<br>默认值是 0；<br>byte 类型用在大型数组中节约空间，主要代替整数，因为 byte 变量占用的空间只有 int 类型的四分之一；<br>例子：byte a = 100，byte b = -50。</p><p><code>short</code>：<br>short 数据类型是 16 位、有符号的以二进制补码表示的整数<br>最小值是 -32768（-2^15）；<br>最大值是 32767（2^15 - 1）；<br>Short 数据类型也可以像 byte 那样节省空间。一个short变量是int型变量所占空间的二分之一；<br>默认值是 0；<br>例子：short s = 1000，short r = -20000。</p><p><code>int</code>：<br>int 数据类型是32位、有符号的以二进制补码表示的整数；<br>最小值是 -2,147,483,648（-2^31）；<br>最大值是 2,147,483,647（2^31 - 1）；<br>一般地整型变量默认为 int 类型；<br>默认值是 0 ；<br>例子：int a = 100000, int b = -200000。</p><p><code>long</code>：<br>long 数据类型是 64 位、有符号的以二进制补码表示的整数；<br>最小值是 -9,223,372,036,854,775,808（-2^63）；<br>最大值是 9,223,372,036,854,775,807（2^63 -1）；<br>这种类型主要使用在需要比较大整数的系统上；<br>默认值是 0L；<br>例子： long a = 100000L，Long b = -200000L。<br>“L”理论上不分大小写，但是若写成”l”容易与数字”1”混淆，不容易分辩。所以最好大写。</p><p><code>float</code>：<br>float 数据类型是单精度、32位、符合IEEE 754标准的浮点数；<br>float 在储存大型浮点数组的时候可节省内存空间；<br>默认值是 0.0f；<br>浮点数不能用来表示精确的值，如货币；<br>例子：float f1 = 234.5f。</p><p><code>double</code>：<br>double 数据类型是双精度、64 位、符合 IEEE 754 标准的浮点数；<br>浮点数的默认类型为 double 类型；<br>double类型同样不能表示精确的值，如货币；<br>默认值是 0.0d，例子：<br>double   d1  = 7D ;<br>double   d2  = 7.;<br>double   d3  =  8.0;<br>double   d4  =  8.D;<br>double   d5  =  12.9867;<br>7 是一个 int 字面量，而 7D，7. 和 8.0 是 double 字面量。</p><p><code>boolean</code>：<br>boolean数据类型表示一位的信息；<br>只有两个取值：true 和 false；<br>这种类型只作为一种标志来记录 true/false 情况；<br>默认值是 false；<br>例子：boolean one = true。</p><p><code>char</code>：<br>char 类型是一个单一的 16 位 Unicode 字符；<br>最小值是 \u0000（十进制等效值为 0）；<br>最大值是 \uffff（即为 65535）；<br>char 数据类型可以储存任何字符；<br>例子：char letter = ‘A’;。</p>
@@ -687,7 +687,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               </div>
             </details></div></div></div>
 
-<h3 id="Java-常量"><a href="#Java-常量" class="headerlink" title="Java 常量"></a>Java 常量</h3><div class="tabs" id="tab-id"><ul class="nav-tabs"><li class="tab active"><a class="#tab-id-1">常量</a></li><li class="tab"><a class="#tab-id-2">特殊的转义字符序列</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-id-1"><details yellow><summary> 点击展开 </summary>
+<h2 id="Java-常量"><a href="#Java-常量" class="headerlink" title="Java 常量"></a>Java 常量</h2><div class="tabs" id="tab-id"><ul class="nav-tabs"><li class="tab active"><a class="#tab-id-1">常量</a></li><li class="tab"><a class="#tab-id-2">特殊的转义字符序列</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-id-1"><details yellow><summary> 点击展开 </summary>
               <div class='content'>
               <ol><li>常量在程序运行时是不能被修改的。<br>在 Java 中使用 final 关键字来修饰常量，声明方式和变量类似：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">final double PI &#x3D; 3.1415927;</span><br></pre></td></tr></table></figure></li><li>虽然常量名也可以用小写，但为了便于识别，通常使用大写字母表示常量。<br>字面量可以赋给任何内置类型的变量。例如：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">byte a &#x3D; 68;</span><br><span class="line">char a &#x3D; &#39;A&#39;</span><br></pre></td></tr></table></figure></li><li>byte、int、long、和short都可以用十进制、16进制以及8进制的方式来表示。<br>当使用字面量的时候，前缀 0 表示 8 进制，而前缀 0x 代表 16 进制, 例如：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int decimal &#x3D; 100;</span><br><span class="line">int octal &#x3D; 0144;</span><br><span class="line">int hexa &#x3D;  0x64;</span><br></pre></td></tr></table></figure></li><li>和其他语言一样，Java的字符串常量也是包含在两个引号之间的字符序列。下面是字符串型字面量的例子：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;Hello World&quot;</span><br><span class="line">&quot;two\nlines&quot;</span><br><span class="line">&quot;\&quot;This is in quotes\&quot;&quot;</span><br></pre></td></tr></table></figure></li><li>字符串常量和字符常量都可以包含任何Unicode字符。例如：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">char a &#x3D; &#39;\u0001&#39;;</span><br><span class="line">String a &#x3D; &quot;\u0001&quot;;</span><br></pre></td></tr></table></figure></li></ol>
               </div>
@@ -697,7 +697,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               </div>
             </details></div></div></div>
 
-<h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><p>整型、实型（常量）、字符型数据可以混合运算。运算中，不同类型的数据先转化为同一类型，然后进行运算。<br>转换从低级到高级。</p>
+<h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><p>整型、实型（常量）、字符型数据可以混合运算。运算中，不同类型的数据先转化为同一类型，然后进行运算。<br>转换从低级到高级。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">低  ------------------------------------&gt;  高</span><br><span class="line">byte,short,char—&gt; int —&gt; long—&gt; float —&gt; double </span><br></pre></td></tr></table></figure>
 <p>数据类型转换必须满足如下规则：</p>
 <ol>
@@ -761,10 +761,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-21T21:56:52+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-22T22:26:42+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2021年5月21日</p>
+    <p>更新于：2021年5月22日</p>
   </a>
 </div>
 
@@ -867,7 +867,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Java-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">Java 基本数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java-%E5%B8%B8%E9%87%8F"><span class="toc-text">Java 常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-text">类型转换</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">Java 基本数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-%E5%B8%B8%E9%87%8F"><span class="toc-text">Java 常量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-text">类型转换</span></a></li></ol>
     </div>
   </section>
 

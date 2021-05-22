@@ -22,11 +22,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>个人博客搭建记录日志-github托管 - Lznote</title>
+  <title>hexo搭建记录日志-github托管 - Lznote</title>
   
-    <meta name="keywords" content="博客">
+    <meta name="keywords" content="hexo如何托管到github,hexo部署到github">
   
 
+  
+    <meta name="description" content="本文为hexo托管到github教程。">
   
 
   <!-- feed -->
@@ -663,7 +665,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title">
-        个人博客搭建记录日志-github托管
+        hexo搭建记录日志-github托管
       </h1>
       <div class='new-meta-box'>
         
@@ -674,7 +676,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
   
-  <h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><p>1.登录github创建储存库，名称：github用户名.github.io<br><br>2.打开 Git-Bash 输入 cd blog进入目录<br><br>3.安装github部署插件，输入 <code>cnpm install hexo-deployer-git --save</code> 回车<br><br>4.打开配置_config.yml文件，路径：blog目录下<br><br>5.打开后，文件的最底部，在type:后面加上git（type: git）—冒号后面要打空格<br><br>6.然后换行加上repo:,接着在repo:后面加上储存库地址（repo: 此处为点击储存库然后复制浏览器地址栏的地址.git）—冒号后面要打空格<br><br>7.然后换行加上branh: master  —冒号后面要打空格 ，然后保存关闭<br><br>8.输入 hexo g 生成<br><br>9.输入 hexo d 部署上传即可<br><br>10.注意：hexo d 上传报错时，则是没有进行身份验证，此时分别输入 git config –global user.email “github账号” 以及 git config –global user.name “github用户名” 进行验证即可<br><br>11.然后重新部署即可<br><br>12.通过存储库名称即可实现托管进行云端访问 （例如： <a target="_blank" rel="noopener" href="https://zyxlfl.top/">https://zyxlfl.top</a> ）<br></p>
+  <div class="note warning"><p>本文为2020年教程，hexo具有时效性，方法可能发生改变，酌情观看</p></div>
+<h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><p>1.登录github创建储存库，名称：github用户名.github.io<br><br>2.打开 Git-Bash 输入 cd blog进入目录<br><br>3.安装github部署插件，输入 <code>cnpm install hexo-deployer-git --save</code> 回车<br><br>4.打开配置_config.yml文件，路径：blog目录下<br><br>5.打开后，文件的最底部，在type:后面加上git（type: git）—冒号后面要打空格<br><br>6.然后换行加上repo:,接着在repo:后面加上储存库地址（repo: 此处为点击储存库然后复制浏览器地址栏的地址.git）—冒号后面要打空格<br><br>7.然后换行加上branh: master  —冒号后面要打空格 ，然后保存关闭<br><br>8.输入 hexo g 生成<br><br>9.输入 hexo d 部署上传即可<br><br>10.注意：hexo d 上传报错时，则是没有进行身份验证，此时分别输入 git config –global user.email “github账号” 以及 git config –global user.name “github用户名” 进行验证即可<br><br>11.然后重新部署即可<br><br>12.通过存储库名称即可实现托管进行云端访问 （例如： <a href="https://lznote.com/">https://lznote.com</a> ）<br></p>
 
   
   
@@ -730,10 +733,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-04-29T19:33:19+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-22T22:23:25+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2021年4月29日</p>
+    <p>更新于：2021年5月22日</p>
   </a>
 </div>
 
@@ -764,7 +767,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="个人博客搭建记录日志-github托管" data-path="/hexo/hexoTwo.html">
+      <div id="lc-pv" data-title="hexo搭建记录日志-github托管" data-path="/hexo/hexoTwo.html">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -786,15 +789,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class="prev-next">
       
         <a class='prev' href='/hexo/hexoThree.html'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>个人博客搭建记录日志-更换主题</p>
-          <p class='content'>操作步骤1.登录到https://hexo.io/themes 寻找到合适的开源主题2.点击跳转到github下载源码zip3.解压，放到 C:\用户\你的用户名\blog\themes 下 4...</p>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>hexo搭建记录日志-更换主题</p>
+          <p class='content'>本文为2020年教程，hexo具有时效性，方法可能发生改变，酌情观看
+操作步骤1.登录到https://hexo.io/themes 寻找到合适的开源主题2.点击跳转到github下载源码zip...</p>
         </a>
       
       
         <a class='next' href='/hexo/hexoOne.html'>
-          <p class='title'>个人博客搭建记录日志-基础搭建<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>利用到的工具和环境win10环境和hexo博客框架工具下载链接位于文章尾部 1.node.js 2.git 
-操作步骤1.安装node.js (建议安装v12.14.0版本)2.成功后win+R...</p>
+          <p class='title'>hexo搭建记录日志-基础搭建<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>本文为2020年教程，hexo具有时效性，方法可能发生改变，酌情观看
+利用到的工具和环境win10环境和hexo博客框架工具下载链接位于文章尾部 1.node.js 2.git 
+操作步骤1.安...</p>
         </a>
       
     </div>
@@ -856,7 +861,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="个人博客搭建记录日志-github托管";
+  pdata.postTitle="hexo搭建记录日志-github托管";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   // header 这里无论是否开启pjax都需要

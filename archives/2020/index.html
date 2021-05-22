@@ -687,16 +687,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <h2 class="article-title" >
       <a href="/hexo/hexoValine.html">
-        网站添加valine评论
+        hexo-fluid添加valine评论记录
       </a>
     </h2>
   
   <div class='md'>
     
-      
-        修改fluid主题配置文件1.进入fluid主题下的配置文件(config.yml)2.找到comments配置，将enable的值改为true，type的值改为valine3.往下划，找到valine的配置，可见appid与appkey以及serverURLs此3处留空
-前网官网注册获取appid与appkey以及serverURLs点击前往注册LeanCloud1.注册完毕后，进入控制台...
-      
+      <p>本文为fluid主题添加valine评论的笔记。</p>
     
   </div>
   
@@ -734,18 +731,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <h2 class="article-title" >
       <a href="/hexo/hexoEncrypt.html">
-        实现网站文章加密
+        hexo实现文章加密
       </a>
     </h2>
   
   <div class='md'>
     
-      
-        安装encrypt插件1.在博客目录下执行下面的指令安装encrypt
-1cnpm install --save hexo-blog-encrypt
-2.安装完成后，在package.json文件的dependecies依赖中可以看到encrypt插件，证明安装成功
-123    &quot;dependencies&quot;: &#123;    &quot;hexo-blog-encr...
-      
+      <p>有时候我们并不想所有的文章能够被访问者看到，而在hexo中就有这么一款插件，可以加密你的文章，使其需要输入密码才能够阅读，这篇文章为实现过程记录。</p>
     
   </div>
   
@@ -783,17 +775,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <h2 class="article-title" >
       <a href="/hexo/webNum.html">
-        添加网站访问统计
+        hexo-fluid添加网站访问统计
       </a>
     </h2>
   
   <div class='md'>
     
-      
-        不蒜子统计常见问题
-修改fluid主题配置文件1.进入fluid主题下的配置文件(config.yml)2.找到页脚footer部分配置3.往下翻，找到 statistics 的配置，将 enable 的值改为 true 即可
-可能会发生的问题以及解决方法1.初始统计数值过大，此为正常现在，在本地访问时，你看到的数值将会是这样，你只需要提交到github仓库或者是你的服务器上即可解决这个问题...
-      
+      <p>本文为fluid主题添加不蒜子访问统计笔记记录。</p>
     
   </div>
   
@@ -831,16 +819,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <h2 class="article-title" >
       <a href="/hexo/webTime.html">
-        简单的添加网站运行时间
+        hexo添加网站运行时间
       </a>
     </h2>
   
   <div class='md'>
     
-      
-        修改footer.ejs文件1.文件位于themes/fluid/layout/partial ,你只需要在里面加一个div标签就可以了，里面原本是有两个div标签，你放的顺序影响着显示的顺序。直接将下列代码复制即可
-123456789101112131415161718192021222324252627282930&lt;div&gt;     &lt;span id=&quot;tim...
-      
+      <p>本文为简单的添加hexo网站的运行时间，现在的主题基本都内置了运行时间，如果你的网站没有内置，那么本文章可以帮助到你。</p>
     
   </div>
   
@@ -878,15 +863,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <h2 class="article-title" >
       <a href="/hexo/hexoThree.html">
-        个人博客搭建记录日志-更换主题
+        hexo搭建记录日志-更换主题
       </a>
     </h2>
   
   <div class='md'>
     
-      
-        操作步骤1.登录到https://hexo.io/themes 寻找到合适的开源主题2.点击跳转到github下载源码zip3.解压，放到 C:\用户\你的用户名\blog\themes 下 4.打开blog目录下的 _config.yml 配置文件，打开找到 theme: 在其后写放到themes文件夹下的主题名字5.打开 Git-Bash 输入 cd blog 进入目录6.输入 hexo...
-      
+      <p>本文为hexo的主题更换教程。</p>
     
   </div>
   
@@ -924,15 +907,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <h2 class="article-title" >
       <a href="/hexo/hexoTwo.html">
-        个人博客搭建记录日志-github托管
+        hexo搭建记录日志-github托管
       </a>
     </h2>
   
   <div class='md'>
     
-      
-        操作步骤1.登录github创建储存库，名称：github用户名.github.io2.打开 Git-Bash 输入 cd blog进入目录3.安装github部署插件，输入 cnpm install hexo-deployer-git --save 回车4.打开配置_config.yml文件，路径：blog目录下5.打开后，文件的最底部，在type:后面加上git（type: git）—冒...
-      
+      <p>本文为hexo托管到github教程。</p>
     
   </div>
   
@@ -970,16 +951,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <h2 class="article-title" >
       <a href="/hexo/hexoOne.html">
-        个人博客搭建记录日志-基础搭建
+        hexo搭建记录日志-基础搭建
       </a>
     </h2>
   
   <div class='md'>
     
-      
-        利用到的工具和环境win10环境和hexo博客框架工具下载链接位于文章尾部 1.node.js 2.git 
-操作步骤1.安装node.js (建议安装v12.14.0版本)2.成功后win+R打开运行，输入cmd，回车 3.在控制台输入 node -v 可查看版本验证是否安装成功 4.安装包管理器，输入 npm install -g cnpm –registry=https://regis...
-      
+      <p>本文为hexo的本地搭建教程。</p>
     
   </div>
   
@@ -1144,8 +1122,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Fri May 21 2021 23:34:36 GMT+0800 (GMT+08:00)</div>
-            <div id="last-update-show">2021-05-21 日</div>
+            <div id="last-update" style="display: none;">Sat May 22 2021 22:43:24 GMT+0800 (GMT+08:00)</div>
+            <div id="last-update-show">2021-05-22 日</div>
           
         </div>
         
@@ -1195,7 +1173,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           try {
             document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
           } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2021-05-21 日';
+            document.getElementById('last-update-show').innerHTML = '2021-05-22 日';
           }
         </script>
         

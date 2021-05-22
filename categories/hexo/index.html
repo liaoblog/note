@@ -745,11 +745,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md'>
     
-      
-        hexo博客默认的文章路径是 域名/年/月/日/文章名称，这样的多层目录搜索引擎爬虫爬起来非常费力，我们则需要优化文章的URL路径，达到我们优化seo的效果，以及自己想要的指定目录来达成美观且目录辨识度高的需求，下面进入正文
-修改hexo的_config.yml配置文件进入根目录的_config.yml配置文件，找到permalink，将
-1permalink: :year&#x2F;:mo...
-      
+      <p>hexo博客默认的文章路径是 域名/年/月/日/文章名称，这样的多层目录搜索引擎爬虫爬起来非常费力，我们则需要优化文章的URL路径，达到我们优化seo的效果，这篇文章为实现过程记录。</p>
     
   </div>
   
@@ -787,17 +783,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <h2 class="article-title" >
       <a href="/hexo/hexoLinks.html">
-        hexo友链优化
+        hexo-fluid友链优化
       </a>
     </h2>
   
   <div class='md'>
     
-      
-        实现对hexo-fluid的友链自定义，可以在下面放置评论区，以及md格式文字
-正文1.关闭主题配置里面的links2.新建一个links页面hexo new page links3.位于source文件下可见links的md文件下自定义显示的页面了，进入修改4.添加此两项，意为开启评论以及links样式5.进入links.ejs修改，在其末尾处添加以下代码，使评论功能和md格式文字生效
-1...
-      
+      <p>本文简单的实现对hexo-fluid主题的友链自定义，可以在下面放置评论区，以及md格式文字。</p>
     
   </div>
   
@@ -841,9 +833,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md'>
     
-      
-        前言图床是什么？图床就是图片存放的地址，用来节省服务器的资源，也可以变相的提升网站加载速度你是否正在遭遇以下问题：1.在用静态博客网站写文章，图片不知怎么保存，保存在哪里2.网上复制的心仪图片链接，用着用着某一天就失效了3.特意花钱租个云服务器托管图片，划不来，而且上传操作好繁琐4.市面上形形色色的免费图床，但都有时间期限，要么就是速度慢，存储空间小，有的还限流量现在可以利用jsdelivr...
-      
+      <p>利用jsdelivr的cdn加速和GitHub的储存空间，jsdelivr在国内的节点有上百个，而github提供了免费的存储空间，这样我们就得到了一个访问速度贼快，且免费，空间无限的一个图床。</p>
     
   </div>
   
@@ -881,17 +871,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <h2 class="article-title" >
       <a href="/hexo/jspx.html">
-        js实现网站飘雪
+        js实现网站飘雪动态效果
       </a>
     </h2>
   
   <div class='md'>
     
-      
-        说明效果预览：
-新建snow.js文件详细实现步骤：1.在 \Hexo\themes\网站主题\source\js 目录下新建一个 snow.js 文件，粘贴以下代码：
-1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606...
-      
+      <p>本文为hexo添加雪花特效的笔记记录。</p>
     
   </div>
   
@@ -935,10 +921,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md'>
     
-      
-        说明实现不再通过繁杂的github地址githubname.github.io访问仓库，通过简短的域名访问，方便记忆，本篇就讲讲怎么将域名解析到github地址，实现域名访问仓库。
-购买域名1.国内的域名服务商有腾讯云，还有阿里云的等。下面以阿里云的为例：2.购买了自己心仪的域名后，进入阿里云的管理控制台-域名与网站-域名就可以看到购买的域名此时的域名状态是未实名认证的，然后就是实名认证（一...
-      
+      <p>实现不再通过繁杂的github地址githubname.github.io访问仓库，通过简短的域名访问，方便记忆，本篇为怎么将域名解析到github地址，实现域名访问仓库的教程。</p>
     
   </div>
   
@@ -982,12 +965,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md'>
     
-      
-        说明网站在没有提交搜索引擎收录之前，直接搜索你网站的内容是搜不到的，只有提交搜索引擎之后，搜索引擎才能收录你的站点，通过爬虫抓取你网站的东西。
-步骤一:修改config.yml下的url在hexo根目录的_config.yml文件，找到url，将url的值改为自己的域名
-12url: 域名例如：url: https:&#x2F;&#x2F;www.zyxlfl.top
-步骤二: 生成site...
-      
+      <p>网站在没有提交搜索引擎收录之前，直接搜索你网站的内容是搜不到的，只有提交搜索引擎之后，搜索引擎才能收录你的站点，通过爬虫抓取你网站的东西，这篇文章则为实现过程记录。</p>
     
   </div>
   
@@ -1025,16 +1003,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <h2 class="article-title" >
       <a href="/hexo/hexoValine.html">
-        网站添加valine评论
+        hexo-fluid添加valine评论记录
       </a>
     </h2>
   
   <div class='md'>
     
-      
-        修改fluid主题配置文件1.进入fluid主题下的配置文件(config.yml)2.找到comments配置，将enable的值改为true，type的值改为valine3.往下划，找到valine的配置，可见appid与appkey以及serverURLs此3处留空
-前网官网注册获取appid与appkey以及serverURLs点击前往注册LeanCloud1.注册完毕后，进入控制台...
-      
+      <p>本文为fluid主题添加valine评论的笔记。</p>
     
   </div>
   
@@ -1072,18 +1047,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <h2 class="article-title" >
       <a href="/hexo/hexoEncrypt.html">
-        实现网站文章加密
+        hexo实现文章加密
       </a>
     </h2>
   
   <div class='md'>
     
-      
-        安装encrypt插件1.在博客目录下执行下面的指令安装encrypt
-1cnpm install --save hexo-blog-encrypt
-2.安装完成后，在package.json文件的dependecies依赖中可以看到encrypt插件，证明安装成功
-123    &quot;dependencies&quot;: &#123;    &quot;hexo-blog-encr...
-      
+      <p>有时候我们并不想所有的文章能够被访问者看到，而在hexo中就有这么一款插件，可以加密你的文章，使其需要输入密码才能够阅读，这篇文章为实现过程记录。</p>
     
   </div>
   
@@ -1121,17 +1091,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <h2 class="article-title" >
       <a href="/hexo/webNum.html">
-        添加网站访问统计
+        hexo-fluid添加网站访问统计
       </a>
     </h2>
   
   <div class='md'>
     
-      
-        不蒜子统计常见问题
-修改fluid主题配置文件1.进入fluid主题下的配置文件(config.yml)2.找到页脚footer部分配置3.往下翻，找到 statistics 的配置，将 enable 的值改为 true 即可
-可能会发生的问题以及解决方法1.初始统计数值过大，此为正常现在，在本地访问时，你看到的数值将会是这样，你只需要提交到github仓库或者是你的服务器上即可解决这个问题...
-      
+      <p>本文为fluid主题添加不蒜子访问统计笔记记录。</p>
     
   </div>
   
@@ -1312,8 +1278,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Fri May 21 2021 23:34:36 GMT+0800 (GMT+08:00)</div>
-            <div id="last-update-show">2021-05-21 日</div>
+            <div id="last-update" style="display: none;">Sat May 22 2021 22:43:24 GMT+0800 (GMT+08:00)</div>
+            <div id="last-update-show">2021-05-22 日</div>
           
         </div>
         
@@ -1363,7 +1329,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           try {
             document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
           } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2021-05-21 日';
+            document.getElementById('last-update-show').innerHTML = '2021-05-22 日';
           }
         </script>
         

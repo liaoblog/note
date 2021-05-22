@@ -22,11 +22,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>实现网站文章加密 - Lznote</title>
+  <title>hexo实现文章加密 - Lznote</title>
   
-    <meta name="keywords" content="hexo">
+    <meta name="keywords" content="hexo文章加密,hexo加密插件">
   
 
+  
+    <meta name="description" content="有时候我们并不想所有的文章能够被访问者看到，而在hexo中就有这么一款插件，可以加密你的文章，使其需要输入密码才能够阅读，这篇文章为实现过程记录。">
   
 
   <!-- feed -->
@@ -663,7 +665,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title">
-        实现网站文章加密
+        hexo实现文章加密
       </h1>
       <div class='new-meta-box'>
         
@@ -674,16 +676,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
   
-  <h3 id="安装encrypt插件"><a href="#安装encrypt插件" class="headerlink" title="安装encrypt插件"></a>安装encrypt插件</h3><p>1.在博客目录下执行下面的指令安装encrypt</p>
+  <div class="note "><p>安装此插件时主题为<code>fluid</code></p></div>
+
+<h2 id="安装encrypt插件"><a href="#安装encrypt插件" class="headerlink" title="安装encrypt插件"></a>安装encrypt插件</h2><p>1.在博客目录下执行下面的指令安装encrypt</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install --save hexo-blog-encrypt</span><br></pre></td></tr></table></figure>
 <p>2.安装完成后，在package.json文件的dependecies依赖中可以看到encrypt插件，证明安装成功</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">    &quot;dependencies&quot;: &#123;</span><br><span class="line">    &quot;hexo-blog-encrypt&quot;: &quot;^3.0.13&quot;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="加密文章设置-password属性"><a href="#加密文章设置-password属性" class="headerlink" title="加密文章设置(password属性)"></a>加密文章设置(password属性)</h3><p>1.将”password”字段添加到文章信息头部</p>
+<h2 id="加密文章设置-password属性"><a href="#加密文章设置-password属性" class="headerlink" title="加密文章设置(password属性)"></a>加密文章设置(password属性)</h2><p>1.将”password”字段添加到文章信息头部</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: 博客标题</span><br><span class="line">date: 2020-11-07 23:05:38</span><br><span class="line">password: 123</span><br></pre></td></tr></table></figure>
-<h3 id="执行hexo-g-amp-amp-hexo-s后，便可查看"><a href="#执行hexo-g-amp-amp-hexo-s后，便可查看" class="headerlink" title="执行hexo g&amp;&amp;hexo s后，便可查看"></a>执行hexo g&amp;&amp;hexo s后，便可查看</h3><p><img src="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/rBA8ER.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/rBA8ER.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="><br>1.输入密码错误后，界面提示<br><img src="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/rBAKvF.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/rBAKvF.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
-<h3 id="对要加密的文章-，修改文章信息头如下"><a href="#对要加密的文章-，修改文章信息头如下" class="headerlink" title="对要加密的文章 ，修改文章信息头如下"></a>对要加密的文章 ，修改文章信息头如下</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">password: 1234</span><br><span class="line">abstract: 这里有东西被加密了，需要输入密码查看哦。</span><br><span class="line">message: 您好，这里需要密码。</span><br><span class="line">wrong_pass_message: 抱歉，这个密码看着不太对，请再试试。</span><br><span class="line">wrong_hash_message: 抱歉，这个文章不能被纠正，不过您还是能看看解密后的内容。</span><br></pre></td></tr></table></figure>
-<h3 id="encrypt具体配置文件"><a href="#encrypt具体配置文件" class="headerlink" title="encrypt具体配置文件"></a>encrypt具体配置文件</h3><p>1.文件位于blog\node_modules\hexo-blog-encrypt下，可自行修改配</p>
-<h3 id="尾记"><a href="#尾记" class="headerlink" title="尾记"></a>尾记</h3><p>1.有错误请评论指出，谢谢，希望文章能够帮助到烂记性的自己和正在观看此博客的你。</p>
+<h2 id="执行hexo-g-amp-amp-hexo-s后，便可查看"><a href="#执行hexo-g-amp-amp-hexo-s后，便可查看" class="headerlink" title="执行hexo g&amp;&amp;hexo s后，便可查看"></a>执行hexo g&amp;&amp;hexo s后，便可查看</h2><p><img src="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/rBA8ER.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/rBA8ER.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="><br>1.输入密码错误后，界面提示<br><img src="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/rBAKvF.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/rBAKvF.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h2 id="对要加密的文章-，修改文章信息头如下"><a href="#对要加密的文章-，修改文章信息头如下" class="headerlink" title="对要加密的文章 ，修改文章信息头如下"></a>对要加密的文章 ，修改文章信息头如下</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">password: 1234</span><br><span class="line">abstract: 这里有东西被加密了，需要输入密码查看哦。</span><br><span class="line">message: 您好，这里需要密码。</span><br><span class="line">wrong_pass_message: 抱歉，这个密码看着不太对，请再试试。</span><br><span class="line">wrong_hash_message: 抱歉，这个文章不能被纠正，不过您还是能看看解密后的内容。</span><br></pre></td></tr></table></figure>
+<h2 id="encrypt具体配置文件"><a href="#encrypt具体配置文件" class="headerlink" title="encrypt具体配置文件"></a>encrypt具体配置文件</h2><p>1.文件位于blog\node_modules\hexo-blog-encrypt下，可自行修改配</p>
+<h2 id="尾记"><a href="#尾记" class="headerlink" title="尾记"></a>尾记</h2><p>1.有错误请评论指出，谢谢，希望文章能够帮助到烂记性的自己和正在观看此博客的你。</p>
 
   
   
@@ -739,10 +743,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-04-29T19:36:33+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-22T22:04:43+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2021年4月29日</p>
+    <p>更新于：2021年5月22日</p>
   </a>
 </div>
 
@@ -773,7 +777,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="实现网站文章加密" data-path="/hexo/hexoEncrypt.html">
+      <div id="lc-pv" data-title="hexo实现文章加密" data-path="/hexo/hexoEncrypt.html">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -795,13 +799,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class="prev-next">
       
         <a class='prev' href='/hexo/hexoValine.html'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>网站添加valine评论</p>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>hexo-fluid添加valine评论记录</p>
           <p class='content'>修改fluid主题配置文件1.进入fluid主题下的配置文件(config.yml)2.找到comments配置，将enable的值改为true，type的值改为valine3.往下划，找到va...</p>
         </a>
       
       
         <a class='next' href='/hexo/webNum.html'>
-          <p class='title'>添加网站访问统计<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='title'>hexo-fluid添加网站访问统计<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>不蒜子统计常见问题
 修改fluid主题配置文件1.进入fluid主题下的配置文件(config.yml)2.找到页脚footer部分配置3.往下翻，找到 statistics 的配置，将 ena...</p>
         </a>
@@ -846,7 +850,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85encrypt%E6%8F%92%E4%BB%B6"><span class="toc-text">安装encrypt插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A0%E5%AF%86%E6%96%87%E7%AB%A0%E8%AE%BE%E7%BD%AE-password%E5%B1%9E%E6%80%A7"><span class="toc-text">加密文章设置(password属性)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A7%E8%A1%8Chexo-g-amp-amp-hexo-s%E5%90%8E%EF%BC%8C%E4%BE%BF%E5%8F%AF%E6%9F%A5%E7%9C%8B"><span class="toc-text">执行hexo g&amp;&amp;hexo s后，便可查看</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E8%A6%81%E5%8A%A0%E5%AF%86%E7%9A%84%E6%96%87%E7%AB%A0-%EF%BC%8C%E4%BF%AE%E6%94%B9%E6%96%87%E7%AB%A0%E4%BF%A1%E6%81%AF%E5%A4%B4%E5%A6%82%E4%B8%8B"><span class="toc-text">对要加密的文章 ，修改文章信息头如下</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#encrypt%E5%85%B7%E4%BD%93%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-text">encrypt具体配置文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%BE%E8%AE%B0"><span class="toc-text">尾记</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85encrypt%E6%8F%92%E4%BB%B6"><span class="toc-text">安装encrypt插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A0%E5%AF%86%E6%96%87%E7%AB%A0%E8%AE%BE%E7%BD%AE-password%E5%B1%9E%E6%80%A7"><span class="toc-text">加密文章设置(password属性)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%A7%E8%A1%8Chexo-g-amp-amp-hexo-s%E5%90%8E%EF%BC%8C%E4%BE%BF%E5%8F%AF%E6%9F%A5%E7%9C%8B"><span class="toc-text">执行hexo g&amp;&amp;hexo s后，便可查看</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E8%A6%81%E5%8A%A0%E5%AF%86%E7%9A%84%E6%96%87%E7%AB%A0-%EF%BC%8C%E4%BF%AE%E6%94%B9%E6%96%87%E7%AB%A0%E4%BF%A1%E6%81%AF%E5%A4%B4%E5%A6%82%E4%B8%8B"><span class="toc-text">对要加密的文章 ，修改文章信息头如下</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#encrypt%E5%85%B7%E4%BD%93%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-text">encrypt具体配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%BE%E8%AE%B0"><span class="toc-text">尾记</span></a></li></ol>
     </div>
   </section>
 
@@ -865,7 +869,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="实现网站文章加密";
+  pdata.postTitle="hexo实现文章加密";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   // header 这里无论是否开启pjax都需要

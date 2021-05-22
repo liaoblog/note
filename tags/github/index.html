@@ -685,9 +685,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md'>
     
-      
-        前言图床是什么？图床就是图片存放的地址，用来节省服务器的资源，也可以变相的提升网站加载速度你是否正在遭遇以下问题：1.在用静态博客网站写文章，图片不知怎么保存，保存在哪里2.网上复制的心仪图片链接，用着用着某一天就失效了3.特意花钱租个云服务器托管图片，划不来，而且上传操作好繁琐4.市面上形形色色的免费图床，但都有时间期限，要么就是速度慢，存储空间小，有的还限流量现在可以利用jsdelivr...
-      
+      <p>利用jsdelivr的cdn加速和GitHub的储存空间，jsdelivr在国内的节点有上百个，而github提供了免费的存储空间，这样我们就得到了一个访问速度贼快，且免费，空间无限的一个图床。</p>
     
   </div>
   
@@ -731,10 +729,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md'>
     
-      
-        说明实现不再通过繁杂的github地址githubname.github.io访问仓库，通过简短的域名访问，方便记忆，本篇就讲讲怎么将域名解析到github地址，实现域名访问仓库。
-购买域名1.国内的域名服务商有腾讯云，还有阿里云的等。下面以阿里云的为例：2.购买了自己心仪的域名后，进入阿里云的管理控制台-域名与网站-域名就可以看到购买的域名此时的域名状态是未实名认证的，然后就是实名认证（一...
-      
+      <p>实现不再通过繁杂的github地址githubname.github.io访问仓库，通过简短的域名访问，方便记忆，本篇为怎么将域名解析到github地址，实现域名访问仓库的教程。</p>
     
   </div>
   
@@ -900,8 +895,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Fri May 21 2021 23:34:36 GMT+0800 (GMT+08:00)</div>
-            <div id="last-update-show">2021-05-21 日</div>
+            <div id="last-update" style="display: none;">Sat May 22 2021 22:43:24 GMT+0800 (GMT+08:00)</div>
+            <div id="last-update-show">2021-05-22 日</div>
           
         </div>
         
@@ -951,7 +946,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           try {
             document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
           } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2021-05-21 日';
+            document.getElementById('last-update-show').innerHTML = '2021-05-22 日';
           }
         </script>
         

@@ -677,17 +677,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <h2 class="article-title" >
       <a href="/hexo/hexoLinks.html">
-        hexo友链优化
+        hexo-fluid友链优化
       </a>
     </h2>
   
   <div class='md'>
     
-      
-        实现对hexo-fluid的友链自定义，可以在下面放置评论区，以及md格式文字
-正文1.关闭主题配置里面的links2.新建一个links页面hexo new page links3.位于source文件下可见links的md文件下自定义显示的页面了，进入修改4.添加此两项，意为开启评论以及links样式5.进入links.ejs修改，在其末尾处添加以下代码，使评论功能和md格式文字生效
-1...
-      
+      <p>本文简单的实现对hexo-fluid主题的友链自定义，可以在下面放置评论区，以及md格式文字。</p>
     
   </div>
   
@@ -853,8 +849,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Fri May 21 2021 23:34:36 GMT+0800 (GMT+08:00)</div>
-            <div id="last-update-show">2021-05-21 日</div>
+            <div id="last-update" style="display: none;">Sat May 22 2021 22:43:24 GMT+0800 (GMT+08:00)</div>
+            <div id="last-update-show">2021-05-22 日</div>
           
         </div>
         
@@ -904,7 +900,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           try {
             document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
           } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2021-05-21 日';
+            document.getElementById('last-update-show').innerHTML = '2021-05-22 日';
           }
         </script>
         

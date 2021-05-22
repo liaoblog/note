@@ -22,11 +22,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>简单的添加网站运行时间 - Lznote</title>
+  <title>hexo添加网站运行时间 - Lznote</title>
   
-    <meta name="keywords" content="hexo,js,html">
+    <meta name="keywords" content="hexo添加网站运行时间教程">
   
 
+  
+    <meta name="description" content="本文为简单的添加hexo网站的运行时间，现在的主题基本都内置了运行时间，如果你的网站没有内置，那么本文章可以帮助到你。">
   
 
   <!-- feed -->
@@ -663,7 +665,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title">
-        简单的添加网站运行时间
+        hexo添加网站运行时间
       </h1>
       <div class='new-meta-box'>
         
@@ -674,9 +676,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
   
-  <h3 id="修改footer-ejs文件"><a href="#修改footer-ejs文件" class="headerlink" title="修改footer.ejs文件"></a>修改footer.ejs文件</h3><p>1.文件位于themes/fluid/layout/partial ,你只需要在里面加一个div标签就可以了，里面原本是有两个div标签，你放的顺序影响着显示的顺序。直接将下列代码复制即可</p>
+  <h2 id="修改footer-ejs文件"><a href="#修改footer-ejs文件" class="headerlink" title="修改footer.ejs文件"></a>修改footer.ejs文件</h2><p>1.文件位于themes/主题名/layout/partial ,你只需要在里面加一个div标签就可以了，里面原本是有两个div标签，你放的顺序影响着显示的顺序。直接将下列代码复制即可</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;timeDate&quot;</span>&gt;</span>载入天数...<span class="tag">&lt;/<span class="name">span</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;times&quot;</span>&gt;</span>载入时分秒...<span class="tag">&lt;/<span class="name">span</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span> </span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> now = <span class="keyword">new</span> <span class="built_in">Date</span>(); </span></span><br><span class="line"><span class="javascript">        <span class="function"><span class="keyword">function</span> <span class="title">createtime</span>(<span class="params"></span>)</span>&#123; </span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> grt= <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">&quot;10/01/2020 8:00:00&quot;</span>);<span class="comment">//此处修改你的建站时间或者网站上线时间             now.setTime(now.getTime()+250); </span></span></span><br><span class="line">           days = (now - grt ) / 1000 / 60 / 60 / 24; </span><br><span class="line"><span class="javascript">           dnum = <span class="built_in">Math</span>.floor(days); </span></span><br><span class="line">           hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); </span><br><span class="line"><span class="javascript">           hnum = <span class="built_in">Math</span>.floor(hours); </span></span><br><span class="line"><span class="javascript">           <span class="keyword">if</span>(<span class="built_in">String</span>(hnum).length ==<span class="number">1</span> )&#123; </span></span><br><span class="line"><span class="javascript">           hnum = <span class="string">&quot;0&quot;</span> + hnum; </span></span><br><span class="line">           &#125; </span><br><span class="line">           minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); </span><br><span class="line"><span class="javascript">           mnum = <span class="built_in">Math</span>.floor(minutes); i</span></span><br><span class="line"><span class="javascript">           <span class="function"><span class="title">f</span>(<span class="params"><span class="built_in">String</span>(mnum).length ==<span class="number">1</span> </span>)</span>&#123; </span></span><br><span class="line"><span class="javascript">           mnum = <span class="string">&quot;0&quot;</span> + mnum; </span></span><br><span class="line">           &#125; </span><br><span class="line">           seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); </span><br><span class="line"><span class="javascript">           snum = <span class="built_in">Math</span>.round(seconds); </span></span><br><span class="line"><span class="javascript">           <span class="keyword">if</span>(<span class="built_in">String</span>(snum).length ==<span class="number">1</span> )&#123; </span></span><br><span class="line"><span class="javascript">           snum = <span class="string">&quot;0&quot;</span> + snum; </span></span><br><span class="line">           &#125; </span><br><span class="line"><span class="javascript">           <span class="built_in">document</span>.getElementById(<span class="string">&quot;timeDate&quot;</span>).innerHTML = <span class="string">&quot;本站已经运行&amp;nbsp&quot;</span>+dnum+<span class="string">&quot;&amp;nbsp天&quot;</span>; </span></span><br><span class="line"><span class="javascript">           <span class="built_in">document</span>.getElementById(<span class="string">&quot;times&quot;</span>).innerHTML = hnum + <span class="string">&quot;&amp;nbsp小时&amp;nbsp&quot;</span> + mnum + <span class="string">&quot;&amp;nbsp分&amp;nbsp&quot;</span> + snum + <span class="string">&quot;&amp;nbsp秒啦~~&quot;</span>; </span></span><br><span class="line">           &#125; </span><br><span class="line"><span class="javascript">           <span class="built_in">setInterval</span>(<span class="string">&quot;createtime()&quot;</span>,<span class="number">250</span>);           </span></span><br><span class="line">           <span class="tag">&lt;/<span class="name">script</span>&gt;</span> </span><br><span class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="尾记"><a href="#尾记" class="headerlink" title="尾记"></a>尾记</h3><p>1.有错误请评论指出，谢谢，希望文章能够帮助到烂记性的自己和正在观看此博客的你。</p>
+<h2 id="尾记"><a href="#尾记" class="headerlink" title="尾记"></a>尾记</h2><p>1.有错误请评论指出，谢谢，希望文章能够帮助到烂记性的自己和正在观看此博客的你。</p>
 
   
   
@@ -732,10 +734,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-09T00:29:42+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-22T22:40:33+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2021年5月9日</p>
+    <p>更新于：2021年5月22日</p>
   </a>
 </div>
 
@@ -766,7 +768,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="简单的添加网站运行时间" data-path="/hexo/webTime.html">
+      <div id="lc-pv" data-title="hexo添加网站运行时间" data-path="/hexo/webTime.html">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -788,15 +790,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class="prev-next">
       
         <a class='prev' href='/hexo/webNum.html'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>添加网站访问统计</p>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>hexo-fluid添加网站访问统计</p>
           <p class='content'>不蒜子统计常见问题
 修改fluid主题配置文件1.进入fluid主题下的配置文件(config.yml)2.找到页脚footer部分配置3.往下翻，找到 statistics 的配置，将 ena...</p>
         </a>
       
       
         <a class='next' href='/hexo/hexoThree.html'>
-          <p class='title'>个人博客搭建记录日志-更换主题<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>操作步骤1.登录到https://hexo.io/themes 寻找到合适的开源主题2.点击跳转到github下载源码zip3.解压，放到 C:\用户\你的用户名\blog\themes 下 4...</p>
+          <p class='title'>hexo搭建记录日志-更换主题<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>本文为2020年教程，hexo具有时效性，方法可能发生改变，酌情观看
+操作步骤1.登录到https://hexo.io/themes 寻找到合适的开源主题2.点击跳转到github下载源码zip...</p>
         </a>
       
     </div>
@@ -839,7 +842,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9footer-ejs%E6%96%87%E4%BB%B6"><span class="toc-text">修改footer.ejs文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%BE%E8%AE%B0"><span class="toc-text">尾记</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9footer-ejs%E6%96%87%E4%BB%B6"><span class="toc-text">修改footer.ejs文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%BE%E8%AE%B0"><span class="toc-text">尾记</span></a></li></ol>
     </div>
   </section>
 
@@ -858,7 +861,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="简单的添加网站运行时间";
+  pdata.postTitle="hexo添加网站运行时间";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   // header 这里无论是否开启pjax都需要
