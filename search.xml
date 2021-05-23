@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>seo专项优化解决网站收录问题-所有网站通用</title>
+      <link href="hexo/hexoSeo.html"/>
+      <url>hexo/hexoSeo.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>什么是seo，即为搜索引擎优化，目的是为了让网站做到更好的收录量，以及排名和提升流量，一个网站单有页面是不够的，必须去很好贴合搜索引擎做好规则，才能在各大搜索引擎取得很好的排名以及收录量，网站搜索引擎优化任务主要是认识与了解其它搜索引擎怎样紧抓网页、怎样索引、怎样确定搜索关键词等相关技术后，以此优化本网页内容，确保其能够与用户浏览习惯相符合，这样，你的网站获得展现量将会有着很大的提升。本人在seo领域摸爬滚打了很多年，总结了一些优化的方法，分享给你们，对你有帮助的话，记得收藏本站哦。</p><h2 id="域名以及备案"><a href="#域名以及备案" class="headerlink" title="域名以及备案"></a>域名以及备案</h2><ol><li>首先呢，各大搜索引擎目前只针对.com和.cn这样的高质量域名友好，优先级比其他后缀的域名要高的多，如果你不是.com或者.cn的域名，还是要酌情考虑一下更换哦。</li><li>其次，就是网站备案，无论是哪个搜索引擎，对于备案的网站和没备案的网站，都会优先收录备案的网站，如条件允许，建议还是备案哦。</li></ol><h2 id="网站结构优化"><a href="#网站结构优化" class="headerlink" title="网站结构优化"></a>网站结构优化</h2><ol><li>网站结构是SEO的基础，网站结构设计得合理，不但能够加快网站收录，还能够提升用户体验，直接让后期很多SEO操作事半功倍，很多hexo网站的结构都是非常冗长的。</li><li>先拿路径来说，典型的路径都是<code>域名/年/月/日/文章名称</code>,这样的多层目录搜索引擎爬虫爬起来非常费力，我们则需要优化文章的URL路径，最好是在三级目录以内，hexo更改文章路径的教程，本站已经出过了一篇教程，点击<a href="/hexo/hexoFolder/">前往查看</a>即可。</li><li>不是hexo网站的用户，可以根据自身站点的相关配置进行更改。页面位置，不宜过于复杂，同一种类型的文章，要放在同一个路径，最好使用英文路径，文章路径名也使用英文来命名，就拿本站来说，本站所有关于hexo的文章都存放在<code>域名/hexo/路径</code>下。</li></ol><h2 id="添加sitemap站点地图"><a href="#添加sitemap站点地图" class="headerlink" title="添加sitemap站点地图"></a>添加sitemap站点地图</h2><ol><li>sitemap站点地图可以让搜索引擎更便捷的抓取你的网站，一般为XML文件。</li><li>hexo有两个插件可以自动生成sitemap，一个是通用的，一个是百度专属的，建议两个都安装上，不是hexo站点的用户，可以根据自己站点的配置和文档，添加相应的站点地图。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure></li><li>安装完成后，进入根目录的_config.yml配置文件，添加以下代码<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 自动生成sitemap</span><br><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br><span class="line">baidusitemap:</span><br><span class="line">  path: baidusitemap.xml</span><br></pre></td></tr></table></figure></li><li>每次运行hexo g ，则会在缓存文件夹下生成sitemap.xml baidusitemap.xml则为成功，生成了sitemap后，则需要提交sitemap给搜索引擎，百度则是进入搜索资源平台的站点管理，点击sitemap，添加baidusitemap.xml的路径谷歌则是进入Google Search Console，进入站点地图，添加sitemap.xml的路径。</li></ol><h2 id="提交至搜索引擎"><a href="#提交至搜索引擎" class="headerlink" title="提交至搜索引擎"></a>提交至搜索引擎</h2><ol><li>对于百度和谷歌提交搜索引擎，本站也做了相应的教程，点击前往查看即可-<a href="baiduweb">百度</a>-<a href="gooleweb">谷歌</a>，如果已经完成sitemap生成，进入这两篇教程内可以跳过sitemap的步骤。</li></ol><h2 id="关键词与描述-重中之重"><a href="#关键词与描述-重中之重" class="headerlink" title="关键词与描述(!重中之重!)"></a>关键词与描述(!重中之重!)</h2><ol><li>这一点非常的重要，这是seo优化的根基所在。</li><li>关键词与描述就是是<code>keywords和description</code>，是告诉搜索引擎你这个网页的关键词和你这个网页是干什么的，不能乱写，一定要按照规则来写。</li><li>网站的主页，以及每一篇文章页面，都要有相应的关键词与描述，切记，关键词不可以相同，比如A文章有了xxx关键词，则B文章不允许出现这个关键词，而且，一个文章只能有3个以内的关键词，否则将造成关键词堆砌，严重的话，搜索引擎将会屏蔽你的网站，描述不可以复制别人的，适当的摘抄，一定要自己写。</li><li>下面来看看关键词具体体现在哪里，这是网站首页源代码处所见的关键词和描述，可以看到，关键词是与内容相关的文字，描述则是介绍这个页面<br><img src="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/hexoseo1.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/hexoseo1.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></li><li>hexo首页的关键词和描述可以在根目录的_config.yml配置文件修改<br><img src="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/hexoseo2.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/hexoseo2.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></li><li>然后就是文章添加关键词与描述了，hexo的主题基本都自带了这个配置，如果没有这个配置，那就换一个主题吧(狗头)，拿本篇文章做例子，可以看到，这是源代码模式下的关键词和描述。<br><img src="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/hexoseo4.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/hexoseo4.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></li><li>那么怎么实现它呢，进入到文章的md编辑页面，在头部位置添加以下内容即可<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">keywords: </span><br><span class="line">description: </span><br></pre></td></tr></table></figure><img src="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/hexoseo5.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/hexoseo5.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></li></ol><h2 id="添加robots-txt"><a href="#添加robots-txt" class="headerlink" title="添加robots.txt"></a>添加robots.txt</h2><ol><li>robots可以告诉搜索引擎，哪些路径的文件允许抓取，哪些不允许抓取，还可以告诉搜索引擎你网站的sitemap。</li><li>在 …/source 路径下创建robots.txt文件，里面输入你的robots配置，如果不懂，可以百度robots的语法，修改后保存即可提交。</li></ol><h2 id="建设高质量的外链"><a href="#建设高质量的外链" class="headerlink" title="建设高质量的外链"></a>建设高质量的外链</h2><ol><li>网站优化外链的建设是不可缺少的，也网站获得高质投票最为重要的渠道，一般外链的建设分为友情链接建设及软文外链建设等等。</li><li>可以去一些权重比较大的网站发布一些文章，跳转到你的网站，增加百度抓取的入口，也可以在社交平台留下自己网站的链接。</li></ol><h2 id="友情链接的设置"><a href="#友情链接的设置" class="headerlink" title="友情链接的设置"></a>友情链接的设置</h2><ol><li>网站友情链接不要超过10个，多了的话会造成权重流失严重，友链的网站也是很多友链的话，给自己的权重也会造成影响，将会得不偿失，如果对方的网站很有价值的话可以不用考虑。</li><li>友情链接的网站也应该注意考察对方的网站有没有降权，和违法内容，如果不注意会牵连自己网站，造成降权等严重后果，友情链接在精而不在多。</li><li>链接的网站应该有自己的网站有相关性，这一点很重要，不要盲目添加。</li></ol><h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ol><li>关键词禁止堆砌</li><li>内容禁止摘抄</li><li>页面内最好不要出现其他网站的链接，指的是文章正文内，蜘蛛在爬取的时候，如果遇到外部链接，就会顺着外部链接出去，到别人的网站去了，这是值得注意的，友链什么的没关系。</li><li>文章发布的时间最好是每天的同一时间，这样对收录有帮助。</li><li>网站每天跟新文章的数量越多，百度抓取的频率越高，收录的几率越高</li><li>网页打开速度（影响打开速度的有:服务器的配置、图片大小、加载的js和css）一定不能超过200毫秒。</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> seo </tag>
+            
+            <tag> 收录 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Java笔记2-变量类型</title>
       <link href="code/javaNote2.html"/>
       <url>code/javaNote2.html</url>
