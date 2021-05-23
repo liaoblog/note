@@ -5854,7 +5854,11 @@ img.lazyload:not(.placeholder).loaded {
 }
 .l_main .post img {
   max-width: 70%;
+  max-height: 100%;
 }
 #valine_container img {
   width: auto;
+}
+.l_main .friend-content img {
+  max-width: 100%;
 }
