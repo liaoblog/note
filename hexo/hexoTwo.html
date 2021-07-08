@@ -644,9 +644,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
   
-  <div class="note warning"><p>本文为2020年教程，hexo具有时效性，方法可能发生改变，酌情观看</p></div>
-<h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><p>1.登录github创建储存库，名称：github用户名.github.io<br><br>2.打开 Git-Bash 输入 cd blog进入目录<br><br>3.安装github部署插件，输入 <code>cnpm install hexo-deployer-git --save</code> 回车<br><br>4.打开配置_config.yml文件，路径：blog目录下<br><br>5.打开后，文件的最底部，在type:后面加上git（type: git）—冒号后面要打空格<br><br>6.然后换行加上repo:,接着在repo:后面加上储存库地址（repo: 此处为点击储存库然后复制浏览器地址栏的地址.git）—冒号后面要打空格<br><br>7.然后换行加上branh: master  —冒号后面要打空格 ，然后保存关闭<br><br>8.输入 hexo g 生成<br><br>9.输入 hexo d 部署上传即可<br><br>10.注意：hexo d 上传报错时，则是没有进行身份验证，此时分别输入 git config –global user.email “github账号” 以及 git config –global user.name “github用户名” 进行验证即可<br><br>11.然后重新部署即可<br><br>12.通过存储库名称即可实现托管进行云端访问 （例如： <a href="https://lznote.com/">https://lznote.com</a> ）<br></p>
-
+  <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，这个密码看着不太对，请再试试。" data-whm="抱歉，这个文章不能被纠正，不过您还是能看看解密后的内容。">
+  <script id="hbeData" type="hbeData" data-hmacdigest="199ebf3c099dc1f4d6af677579eec49ebad9dcca5befdd9c5f5b28636e4d9c5b">69cadf9e87137d8849f6a100dd7ba75c5519a0f9dd0c0a8f9a5587071229c23215f60fa9622806940397767bcf19dd54664d3a2243323ddd84e77c3b75794cb12e1cc47f80ad717d3136ee99a1b8cb8baf878b046624d582d767f2d44a5164a10b390dc744eb749287826bb47457cbe6e0453fdcaf625d24f06cdf6cc2f3297d4cc0a7d389218147ed822d9d41a8d9a098bc89c1dadd5a0c63d30a1fa0d78cc2dc1f9ac932f1f90d8f16ddce1eb546be210572d3a4651eded41960d2ee96e48bd78ff0a7fe84a9d7ba76eaf5216c811fa875e7fef80448cad0529dce80b4b2bf972c546b6c3e423c5df834bbd63524b86bd15ecd103c87563c7a1e688c27cc524b3996f3253576ed647ab867df8334c78d5a116605094695a58fcefdcaba5dbc64bb37a107cde93337514f62cb4d864f8e90ad66bd4dd072a17abe4ec7f2a831bbbd5374b4e05c7db18cad1a26bf46e3628d218544bac8de2bd5e0aacba80117fc9d085be9994ad90875a7d0628ed7a6e6608468fa5a31c4ed19ff07f9bea03f2095dff152bb75d0b3e2ce83434c8cb5a10d852f3905b67444cf9dd13009e7ad352f9dcbbbc74d200e5bd6823aa6011cb931900aa79c7269b1e8a0f4b4d24de353c661830e56ca775de37bf2ed274688cd3bf152a10d04943ba23588b317b3de35bf94b7048de42749601f3c4f748d0e8e15dd80d029b846be355ca780a4b6d116021d64d61c43ba3d5873114c6c79b7ddca89f04b9fcff774b59cce53e18a51350162985309a45006812e1187073d994a03d3b5c1365f6c8b59c0ee02996646b1e67987cde14de40ad1f059a6db6e8fe10dc928c35a292b96defe92aaf1c9e155709735773b024616444fdfb7c6a15fa0d6242d02da49dfc1fe4dc402f93650e7603f293fd33c609424a7dc91a7125fa29bee8a1d39cebbd44160b639940f59d4e5e7f5589cd8a540762b9577757324c04d35836d3e3584b8cd5995ebe56e78f8cb4f9a3e1955f1d1ac9907f5e2cc5bd96f1f02177e38cb24fda32f2ee5b007f641cc8ad5ff909713e69ccfe243746bf074ab5d96cf5a9e19b367b30ac0cedb0b0d2097d62bda4b82dd25933ee6e408a1aaca4f09f681aecefe25c7923c1b3fe60b2759333b048c2b0cd8c5eccd743dc6e03be5b60d22b32edc2e8ca1de83364ebc7fac40036935ba1a7441c5f196839e5b6b416ac89fb907ebaef416437993985fe80917856369f193b0cf8985c7e2cc1d54ebf8c0310f85865e2b67a5eb4b3d67d59c09d5d1a8f7a2a1ca701d91689a08a94fb8a1ed412d5a607a1657503ece6eeafb80ef353529369e4aa0f572d073977a7433ab6c42971628b459ca7d9c5b2f546a2d44dcb17f87feed1450bfef7de6222431c69e19251b8406f193f0f3fa6fb3ae765eb234cabbd3d48e9f925daf315eefb4c70aadda12ae3758aabd07f48b467f841557993cd753f5586298f4cc29954d88ed7f00fcd56135bbbea7fd56ceef96638a243c1b7e33c119077b099694e64648c94414b24c43254077e447821a632f92aa6df72fce0490a74f6e363d14ccae8011279228230590e9726d9ded1a9cb366087d1ac158ca8926c09c3c7507545e456c71b629f190c4f228ec470605519691816d5477bcca2f4ff9a079b6ec2c66204403fbf3e4c4febd01ac187d2b4d803c5086fa82b36dd5a2f421d9845c2cc1aba8f9c2250130b6c2534879b70c4861d078ae6467c65ccebcebc0b713fc1b4b64b319bc779833ac55c520b7ded4cd507e7ff3ea4e4b7a0691382a3900fdfb351dd1338f3a825262fca0fc5b1f370e1e341bc77e62ade3b8f9ffe83782825efbe90e30b3dbb0c6549d40c02af3e824a8569cc7d3b75b8e86f5c5c7615217da4945114a43adb5671cb42909b5b28aa0c9d004d7d4378ce58617de686b6ee8b60fedf2c8661d71112fc070bb7ed9480c5426e59eaa349571093df50c253b4e99d664eaedcb5f695cd4841b2542</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">点此输入密码，抱歉，这篇文章被加密了，暂时不开放阅读。</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
   
   
     
@@ -701,10 +710,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-22T22:23:25+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-07-08T12:46:12+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2021年5月22日</p>
+    <p>更新于：2021年7月8日</p>
   </a>
 </div>
 
@@ -758,16 +767,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/hexo/hexoThree.html'>
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>hexo搭建记录日志-更换主题</p>
-          <p class='content'>本文为2020年教程，hexo具有时效性，方法可能发生改变，酌情观看
-操作步骤1.登录到https://hexo.io/themes 寻找到合适的开源主题2.点击跳转到github下载源码zip...</p>
+          <p class='content'>
+  69cadf9e87137d8849f6a100dd7ba75c5519a0f9dd0c0a8f9a5587071229c23215f60fa9622806940397767bcf19dd...</p>
         </a>
       
       
         <a class='next' href='/hexo/hexoOne.html'>
           <p class='title'>hexo搭建记录日志-基础搭建<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>本文为2020年教程，hexo具有时效性，方法可能发生改变，酌情观看
-利用到的工具和环境win10环境和hexo博客框架工具下载链接位于文章尾部 1.node.js 2.git 
-操作步骤1.安...</p>
+          <p class='content'>
+  69cadf9e87137d8849f6a100dd7ba75c5519a0f9dd0c0a8f9a5587071229c23215f60fa9622806940397767bcf19dd...</p>
         </a>
       
     </div>
@@ -800,7 +808,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <section class="widget toc-wrapper blur desktop mobile" id="toc-div" >
+  <section class="widget toc-wrapper blur desktop mobile" id="toc-div" style="display:none" >
     
   <header>
     

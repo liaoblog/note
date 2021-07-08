@@ -644,11 +644,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
   
-  <div class="note warning"><p>本文为2020年教程，hexo具有时效性，方法可能发生改变，酌情观看</p></div>
-<h2 id="利用到的工具和环境"><a href="#利用到的工具和环境" class="headerlink" title="利用到的工具和环境"></a>利用到的工具和环境</h2><p>win10环境和hexo博客框架<br><br>工具下载链接位于文章尾部 <br><br>1.node.js <br><br>2.git <br></p>
-<h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><p>1.安装node.js (建议安装v12.14.0版本)<br><br>2.成功后win+R打开运行，输入cmd，回车 <br><br>3.在控制台输入 node -v 可查看版本验证是否安装成功 <br><br>4.安装包管理器，输入 npm install -g cnpm –registry=<a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a> 回车，等待下载 <br><br>5.下载结束后输入cnpm回车，出现提示证明下载安装成功，输入cnpm -v可查看版本号 <br><br>6.开始安装博客全局框架，接着输入 cnpm install -g hexo-cli 回车，等待下载安装，安装完毕后输入 hexo -v 查看版本号验证是否安装成功 <br><br>7.安装git，详细步骤百度 git安装 会有详细安装教程（也可全部下一步傻瓜式安装，为了保险起见做好还是看一下安装教程） <br><br>8.安装完毕后，双击打开刚刚安装好的 Git-Bash （点击win的徽标按键，最近添加里面可以看到刚刚安装的git） <br><br>9.输入 mkdir blog 会创建一个文件夹blog在c盘里（路径：c/用户/你的电脑用户名/blog） <br><br>10.输入 cd blog （以下所有控制台操作都需进入blog目录下输入）<br><br>11.输入 hexo init （初始化博客）<br><br>12.输入 hexo s （启动博客）<br><br>13.出现 Hexo is running at <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> . Press Ctrl+C to stop.dir 证明启动成功，Ctrl+C的意思是停止博客运行<br><br>14.打开浏览器输入 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> 即可访问初始博客<br><br>16.写博客指令输入 hexo n “文章名称” 回车，会创建一个只有名称的空文章<br><br>17.文章路径在 c盘/用户/你的电脑用户名/blog\source_posts里面，通过我的电脑打开，点击你的文章用记事本打开即可写博客，在—这3条杠下面写<br><br>18.清理一下博客，输入 hexo clean 回车<br><br>19.生成，输入 hexo g 回车<br><br>20.运行，输入 hexo s 回车<br><br>21.打开浏览器输入 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> 即可。<br></p>
-<h2 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h2><p>node.js — <a target="_blank" rel="noopener" href="https://nodejs.org/">https://nodejs.org</a> <br><br>git — <a target="_blank" rel="noopener" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a> <br></p>
-
+  <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，这个密码看着不太对，请再试试。" data-whm="抱歉，这个文章不能被纠正，不过您还是能看看解密后的内容。">
+  <script id="hbeData" type="hbeData" data-hmacdigest="406a54f84d051973a2c65e517ba8744ba34851a5b1ec89866e502c43aa959592">69cadf9e87137d8849f6a100dd7ba75c5519a0f9dd0c0a8f9a5587071229c23215f60fa9622806940397767bcf19dd54664d3a2243323ddd84e77c3b75794cb12e1cc47f80ad717d3136ee99a1b8cb8baf878b046624d582d767f2d44a5164a10b390dc744eb749287826bb47457cbe6e0453fdcaf625d24f06cdf6cc2f3297d4cc0a7d389218147ed822d9d41a8d9a0fa8ab30e87517f727c83cd54de30bbf1a10ca144a5b4ddc1bbea074848cf67aa40ac4d9b634686643a620683388405b97509fa09651f53f7f231b1794efa15bfd71349a2d7e08c0e50c39f60bbe7b561ca70c1b08ca74f544d16a8ee346e5ba0020678b11e903103996a23cf1ca442588da75bf0a3e5f506637f8c71b4084284ac1d1df5671e7fa8583f07ae586a9ce798bf6ef7bd965697eea39efa005327d82c6a00c7255aa55ca27922e53815cde08f95625a508dd5c771295a1ceab06fed824af020d8bc99985cd53325204f476284145f7af7097b7186c0ddab7dc5aaffdcb436fa19f95628098aff5a94ea5cb0f06bc8b4bffd27c7cd67d38f9a6898f5c61e37cd29c2afaa57e268fcf728027a48fcb74ba67a27e4d6f8e602799805f18d69650286cb6249114ca35e3241cefc0ea24ae21a868deafc106675272b7088ea1c24b46cb6d6dbe8e938e73d7468cf3cc62d3a4e0b2a9d1606139f6b0ce1c8ba6d320f020eaa1b6d57d5087a73d04b5947e3e21db1a402a4c63b2333eb31f522cec43fbdac5596c8f62150407c51de1bf98e2ea77185f76ee3ce0d88a3f07819823537f0b5fec1d3665c742294acf9180fc9ea8cf7c5d975752adc97be12b0981b20537765c2d58ccb89c5b1e15498c3e60de88bbe625aec7a9c69d0a3cacd2a18a3e43cbf551c82b5bacf37b53e50b763fb9fb7e27c704c0cddb8478f2ae6da54898b38a76e0e425b22e48e940c525596f8dea0bae6323d345e7f313f55cdc0be6d3d92320e6f49473ec30255819d8d3a8aa56a65bca9af04bdb292304844745d68850ac5c19475bf14e1880efe4f63647f1d416dafec9b0f7a2fb4962ee808e6f5f2203abe581fc380ef6b9e0c1984c6c9bda4fbe03204d88110aa5a905f58e073d0c0c5472f7d489edc7717f63ef5dd139befc55189abedf793649a3537c02de1dc75941848bdd8d8f96bcc7529eb8f8993eb103f37f6ed6aa7cd5dc913d7d6b24cd0baa405efea7f688ef8c705d171fd4be23ecaf65aa9d2cf30c71ab50d435232e57ec191044c133988c565a382bcbe266b045ed9f6bc05b7c90f599fc8e353828fb5b8adc36e7f273189b8d8971d042634e0cac5c306aa6fb19fc2e8158fa4428c30f3fae42a9e6be849f15c205089c02380e9cddd458c93719e9098b4369f209b4a443c39358011c867ab19db559a08c968d16aa2e43da9b3b10dc1fc77ec626f0aa4423482089f67c5eafbf31c0c63cdb0eaf7b9ac7f44686f7a43feda9dee930dea5cf8d33fd3de88b233756d165fbb1bc9365750b1c9866baf688f97db47692014ea08b204d783d18183298e937ffe1270e3501304673ba80d07b926b72cfbb8b8aae98b54b573da47900f813d1f1aa6f9a30b09cbc69a97043811da44e91ddede26c0044feb38da8497443ea50b9dcf78357e4cc01281857f83d4a8c380e4e6d029f5ed4b1e452e6b54b5a101c858e88241110cf72d9006967b05ab37c8c8124bfbd51e4151a1b48fd00658e876566d4f4fa59f4aa65feb20f5792e56c8857b7221526dc545783fbf21e9cccf37e0cb0e8b0037724296e1d7f57f1194f8281d126ec193c370b4ff8705541d243e5b9c0c3f2d5e77dca3e205b953ba302c2e71ed746e8d07159bff76fe0c04ed1071aa36a64b09ee2ce37aa4323b9d28929ac01a7ed34868d5996ca87a018310d1ec954fddd939517433758540d9e5cf627a518fbb3cecff463690cb0786522e98553a716f13a9906e3e74b67492547d46f7079499b7e4d5c2c90832c1b81705ac1bbfdab0c27ec80898255ebffbb291d5b027d1cb705a83dc4bc59cd5927a5c955a76feffa802720c96c469a2fbbd31e10e697a2bdef4808ced43bca8e45e210f5f94af43d85b973a8cd4e3a19b280f1a71efaebd8026a02dbf6c2cdd128059d84a440abd1b0197adc17bbac907e5d639427f901cba75d9f64e4e07c304ece287cfc48bbc6f8c1bd2e0c76b49a0fad5f009a2a39e19439b726902f6b2f6e38a099ee10e7f4f1dbce951263a6849b0ee83ec0afd14b4f6099681ab5690b63910e195ce085252246d1ee1ddfff55b321daa9e17c5f9719ba0d84708f66aa764b77e9e4c41d5f2f0a96b2df01f485c7f99aa2052d58f019534fdae733a9895ae0db425a92820ad6541d4fae1d5c95cb7a0f747e241b2c39188cc40a5b7cfe1788c4d289e385c07440e080144943c9ce19d8517dbc09f08473cb6d409881e668d972bf0caf60821ffbf080dbca2dd17a1c294b7ac8d9178508a4c5f44b0d66a196a4d82c7405e15f7d736848ff8cebf38eba6b6b35f4936cc73756527867c9db0c6636b584807e76d204d90838a9d4c5592a735d9caeff28e2ca6ff7efef6d71672abef045a673fd7f92c28b80ce299cb97a92482a7dc3fc6fd90ab9c1a345e1e7903e93b0a2a979c89a1085dfdabf9ea215ab8673bf7d681f6253f96f2f82be2c72519c496f7c6ee94eba1d908eff9e3f5140f616dc54994b33ec0d48c6c2a35c2145aa1e692550f4c96e4e710dedb41459a23b8aaadb28acbd9ba0bdb4a4caf5d11b2dc230dcc2856a183032124f719d450382cc9ae51e780d0aa62501ea73f587b1cbad8f95320145712055a3f4b4fca7cde33704c4fe2c336b1a8c2af44c977ceb5cff42de6af1db09e80daecf974acf78a2323c7f3e1eb564ec8bbaaf48714a65ea4ca3f8118383005723c1bbf05d35ee23e183d6432842037dd77f5d16f3ced1d2d70a155461f4f339ed0eeba777766210dec6ece2360b538c8183862d18cc96df18b3772d8339ffa5c7a761f8042f115606a67ce4737c73f13b8eb02424a7f51184778de7c6354c8ab9eeb971a7f5ace791ba13954b339bd249f0f759c5e6d2295480ec41585674927006d93780f44685afc5d303a27c0cf440791eacf7da976e0bbb998d3f55c20b690f9bb1a7963249e00a1973817fb73662372e52364ea09b06f454c610827bd0a6e824369918c74b84178756b13db09222934012292b569da1242c266fc949dd1a4f1e3a02fc9bdb1a2f8916309d5a3e6e2203507a6e47c8fa16fc60d5b95969dc9a88410bfd731ddf95a41a7c26f0321a8607d1f294caf6b344879b6e642fe6d862b32207bb4d69a7fbeb63858875badfdfa566ea600dbcf49212fc74dfd54270932fcbdcb7310f9c2c0d1fd705e47e02cea7a646f5f6c5e3b521b327970ec09aa234508a90628197d6d25a2f480c24e21fc76b6d3022d63a7fa79999ffac669906ad41a019eb48bebca1378e5898f1ff0e7034d4af2ba9b5651d6d2cf5dfd7bd5bce720f68ba5bb0f0b507e944115d78cb8b5a3a789b289b21daf7c40fff2c49cd51e9c15d0a66afa9821f03c6d7a146faf8258c842001140b6eabcbf527c807bdef07bc45494e99a507459c0b4b213b525e7fb5db177f3f00f9070e9333d30da368101d1875bcefdb17d63eb0ba0fa18379e8ff90fdea9f8b57d4aa25f95249941aee3f642ad43a5872d80a13b2da724ea7498ac74a474f3a4eab8a7f26dbe13802eb2c3fd13faea311e0b533e2efc1d007df92d52574508dc0988487a910f461f707701e62cbc00fa046114b5f6b4cccb038adb73044add73b4642cd4dd98c12c0580e72020d0f31d5349fd7fc624a6c1ec197f4b28f6719ebe3301ea385a7f3c1e1fdcfd203b8e50cc3a5b0ba46aab4b0d7abbc45ed2ceb98449c0790b39b2a725fa862816c199f2221e6211c4b81bfa1a99693bc6b6e927ced0b4668aac728ca35702105622ab42c744e4ca933000cd9a326530fe3fb2948b2883535cdcf7a8e4bd6a5b77053c9cd6b1431f74464e397f7b186219f2851b61b599d67da5b8a857677d6d649eeca339a060c6b309744897188aee736d024589bdcc82302281c2929f03fea4a5a5d4b367d8546838748485415eeb01eb15555621cbb96c55b123546a96b593e28285ca6397c05af925e3</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">点此输入密码，抱歉，这篇文章被加密了，暂时不开放阅读。</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
   
   
     
@@ -703,10 +710,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-22T22:28:41+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-07-08T12:46:00+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2021年5月22日</p>
+    <p>更新于：2021年7月8日</p>
   </a>
 </div>
 
@@ -760,8 +767,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/hexo/hexoTwo.html'>
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>hexo搭建记录日志-github托管</p>
-          <p class='content'>本文为2020年教程，hexo具有时效性，方法可能发生改变，酌情观看
-操作步骤1.登录github创建储存库，名称：github用户名.github.io2.打开 Git-Bash 输入 cd ...</p>
+          <p class='content'>
+  69cadf9e87137d8849f6a100dd7ba75c5519a0f9dd0c0a8f9a5587071229c23215f60fa9622806940397767bcf19dd...</p>
         </a>
       
       
@@ -795,7 +802,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <section class="widget toc-wrapper blur desktop mobile" id="toc-div" >
+  <section class="widget toc-wrapper blur desktop mobile" id="toc-div" style="display:none" >
     
   <header>
     
