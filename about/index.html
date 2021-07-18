@@ -666,7 +666,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="btns circle grid5 center">
             <a class="button" href='https://space.bilibili.com/334485942' title='bilibili</br>Science Monster'><img src='https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/bilibili.jpg'>bilibili</br>Science Monster</a>
 
-<a href='tencent://message/?uin=28033491&Site=admin5.com&Menu=yes'>
+<a href='tencent://message/?uin=2982540030&Site=admin5.com&Menu=yes'>
   <i class='fab fa-qq'></i>
   <b>QQ号</b>
   <p class='p red'>联系我</p>
@@ -836,6 +836,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
   </footer>
+
 
 
         <a id="s-top" class="fas fa-arrow-up fa-fw" href="javascript:void(0)"></a>
@@ -1732,6 +1733,28 @@ volantis.pjax.send(()=>{
 	btn.unbind('click');
 },'toggle-mode-btn-unbind');
 </script>
+
+
+
+
+  
+<script src="/js/sidelar.js"></script>
+
+  <script>
+    function pjax_slider() {
+        if($('#slider')[0]) {
+            $("#slider").sliderImg({
+                imgs: ["https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/lb1.jpg", "https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/lb2.jpg", "https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/lb3.jpg"],
+                link: ["/", "https://space.bilibili.com/334485942", "/about/"],
+            });
+        }
+    }
+    $(function () {
+        pjax_slider();
+    });
+    volantis.pjax.push(pjax_slider)
+</script>
+
 
 
 

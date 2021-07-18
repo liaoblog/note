@@ -986,6 +986,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   </footer>
 
 
+
         <a id="s-top" class="fas fa-arrow-up fa-fw" href="javascript:void(0)"></a>
       </div>
     </div>
@@ -1880,6 +1881,28 @@ volantis.pjax.send(()=>{
 	btn.unbind('click');
 },'toggle-mode-btn-unbind');
 </script>
+
+
+
+
+  
+<script src="/js/sidelar.js"></script>
+
+  <script>
+    function pjax_slider() {
+        if($('#slider')[0]) {
+            $("#slider").sliderImg({
+                imgs: ["https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/lb1.jpg", "https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/lb2.jpg", "https://cdn.jsdelivr.net/gh/liaoblog/img@master/blogpage/lb3.jpg"],
+                link: ["/", "https://space.bilibili.com/334485942", "/about/"],
+            });
+        }
+    }
+    $(function () {
+        pjax_slider();
+    });
+    volantis.pjax.push(pjax_slider)
+</script>
+
 
 
 
