@@ -9,7 +9,7 @@ $(function(i) {
 				direction: "left",
 				auto: !0,
 				arrows: !0,
-				width: 824,
+				width: 520,
 				height: 300
 			}, this.options = i.extend(this.options, t), this.time = null, this.nowIndex = 0, this.liWidth = this.options.width,
 			this.itemNum = this.options.imgs.length, this.id = this.options.container, this.init()
@@ -52,7 +52,6 @@ $(function(i) {
 		var t = this;
 		i("." + this.id + "-ul").stop().animate({
 			left: -t.nowIndex * t.liWidth + "px"
-// 			left: "900px"
 		}, t.options.duration, (function() {
 			t.autoMove(t.options.direction)
 		}))
