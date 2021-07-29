@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://lznote.com/tools/aoyunhui.html</loc>
+    
+    <lastmod>2021-07-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lznote.com/tools/yq.html</loc>
+    
+    <lastmod>2021-07-29</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://lznote.com/soft/softTb.html</loc>
     
     <lastmod>2021-07-29</lastmod>
@@ -121,7 +135,7 @@
   </url>
   
   <url>
-    <loc>https://lznote.com/tv/index.html</loc>
+    <loc>https://lznote.com/tools/tv.html</loc>
     
     <lastmod>2021-07-08</lastmod>
     
@@ -177,7 +191,7 @@
   </url>
   
   <url>
-    <loc>https://lznote.com/video/index.html</loc>
+    <loc>https://lznote.com/tools/video.html</loc>
     
     <lastmod>2021-06-05</lastmod>
     
@@ -208,13 +222,6 @@
     <loc>https://lznote.com/info/index.html</loc>
     
     <lastmod>2021-05-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lznote.com/yq/index.html</loc>
-    
-    <lastmod>2021-05-17</lastmod>
     
   </url>
   
@@ -312,13 +319,6 @@
   </url>
   
   <url>
-    <loc>https://lznote.com/tags/%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2021-07-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://lznote.com/tags/ejs/</loc>
     <lastmod>2021-07-29</lastmod>
     <changefreq>daily</changefreq>
@@ -327,6 +327,13 @@
   
   <url>
     <loc>https://lznote.com/tags/comment/</loc>
+    <lastmod>2021-07-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lznote.com/tags/%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2021-07-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
